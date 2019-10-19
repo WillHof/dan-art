@@ -4,7 +4,7 @@ export class Paintings extends Component {
     render() {
         return (
             <div>
-                paintings
+                Paintings Here
             </div>
         )
     }

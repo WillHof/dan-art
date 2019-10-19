@@ -13,18 +13,18 @@ export class Nav extends Component {
 
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li className="nav-item active">
-                                <Link to="/Home" className={window.location.pathname === "/Home" ? "nav-link active" : "nav-link"}>
+                            <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
+                                <Link to="/" className="nav-link">
                                     Home
                         </Link>
                             </li>
-                            <li className="nav-item active">
-                                <Link to="/About" className={window.location.pathname === "/About" ? "nav-link active" : "nav-link"}>
+                            <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
+                                <Link to="/About" className="nav-link">
                                     About the Artist
                         </Link>
                             </li>
-                            <li className="nav-item active">
-                                <Link to="/Paintings" className={window.location.pathname === "/About" ? "nav-link active" : "nav-link"}>
+                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
+                                <Link to="/Paintings" className="nav-link">
                                     Paintings
                         </Link>
                             </li>
