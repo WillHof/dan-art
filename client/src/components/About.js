@@ -7,19 +7,18 @@ export class About extends Component {
         return (
             <div>
                 <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-3 d-none d-md-block">
-                    <Nav />
+                    <div className="row">
+                        <div className="col-md-3 d-none d-md-block">
+                            <Vnav />
+                        </div>
+                        <div className="d-block d-md-none col-sm-12">
+                            <Nav />
+                        </div>
+
+                        <div className="col-md-8 col-sm-12">  About</div>
                     </div>
-                    <div className="d-block d-md-none col-sm-12">
-                    <Vnav /> 
-                    
-                    </div>
-                    
-                    <div className="col-md-8 col-sm-12">  About</div>
                 </div>
-                </div>
-              
+
             </div>
         )
     }

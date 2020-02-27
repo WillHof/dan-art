@@ -10,7 +10,7 @@ export class Vnav extends Component {
                    
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li className={window.location.pathname === "/" ? "nav-item active" : "nav-item"}>
+                            <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
                                 <Link to="/" className="nav-link">
                                     Home
                                 </Link>
