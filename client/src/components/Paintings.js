@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Nav from "./Nav"
+import hNav from "./h-Nav"
 
 export class Paintings extends Component {
     render() {
         return (
             <div>
-                <Nav/>
+                <hNav />
                 Paintings Here
             </div>
         )

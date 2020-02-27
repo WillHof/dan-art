@@ -4,7 +4,7 @@ export class Nav extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-sm navbar-light bg-light">
+                <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
                         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -16,23 +16,30 @@ export class Nav extends Component {
                             <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
                                 <Link to="/" className="nav-link">
                                     Home
-                        </Link>
-                            </li>
-                            <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
-                                <Link to="/About" className="nav-link">
-                                    About the Artist
-                        </Link>
+                                </Link>
                             </li>
                             <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
                                 <Link to="/Paintings" className="nav-link">
-                                    Paintings
-                        </Link>
+                                    Work
+                                </Link>
+                            </li>
+                            <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
+                                <Link to="/About" className="nav-link">
+                                    Bio
+                                </Link>
+                            </li>
+                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
+                                <Link to="/Paintings" className="nav-link">
+                                    Writing
+                                </Link>
+                            </li>
+                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
+                                <Link to="/Paintings" className="nav-link">
+                                    Contact
+                                </Link>
                             </li>
                         </ul>
-                        {/* <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form> */}
+                        
                     </div>
                 </nav>
             </div>
