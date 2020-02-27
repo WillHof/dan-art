@@ -24,16 +24,16 @@ export class Nav extends Component {
                             </li>
                             <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
                                 <Link to="/About" className="nav-link">
-                                    Bio
+                                    About the Artist
                                 </Link>
                             </li>
-                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
-                                <Link to="/Paintings" className="nav-link">
+                            <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
+                                <Link to="/Writing" className="nav-link">
                                     Writing
                                 </Link>
                             </li>
-                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
-                                <Link to="/Paintings" className="nav-link">
+                            <li className={window.location.pathname === "/Contact" ? "nav-item active" : "nav-item"}>
+                                <Link to="/Contact" className="nav-link">
                                     Contact
                                 </Link>
                             </li>

@@ -5,9 +5,9 @@ export class Vnav extends Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-                    
+
                     <a className="navbar-brand" href="/">Dan's Art</a>
-                   
+
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
@@ -25,18 +25,18 @@ export class Vnav extends Component {
                                     About the Artist
                                 </Link>
                             </li>
-                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
-                                <Link to="/Paintings" className="nav-link">
+                            <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
+                                <Link to="/Writing" className="nav-link">
                                     Writing
                                 </Link>
                             </li>
-                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
-                                <Link to="/Paintings" className="nav-link">
+                            <li className={window.location.pathname === "/Contact" ? "nav-item active" : "nav-item"}>
+                                <Link to="/Contact" className="nav-link">
                                     Contact
                                 </Link>
                             </li>
                         </ul>
-                        
+
                     </div>
                 </nav>
             </div>
