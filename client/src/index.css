@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+#VNav{
+  height:100vh;
+  display:block
+}
+#nBrand{
+  padding-top:5rem;
+  padding-bottom: 2.6rem;
+}
