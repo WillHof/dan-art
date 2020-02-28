@@ -8,11 +8,11 @@ export class Vnav extends Component {
                     <a className="navbar-brand cLight" id="nBrand" href="/">Dan's Art</a>
 
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="">
-                        <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
+                        {/* <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
                             <Link to="/" className="nav-link">
                                 Home
                                 </Link>
-                        </li>
+                        </li> */}
                         <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
                             <Link to="/Paintings" className="nav-link">
                                 Work

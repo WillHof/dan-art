@@ -28,6 +28,12 @@ code {
   height:auto;
   max-height:522px
 }
+.paintingImage{
+  max-width: 100%;
+  display:block;
+  height:auto;
+  max-height:522px
+}
 .blockContainer{
   text-align: left;
   padding-left: 3rem;

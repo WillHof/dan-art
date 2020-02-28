@@ -12,11 +12,11 @@ export class Nav extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
+                            {/* <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
                                 <Link to="/" className="nav-link">
                                     Home
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
                                 <Link to="/Paintings" className="nav-link">
                                     Work
