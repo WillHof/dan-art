@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Nav from "./h-Nav"
-import Vnav from "./v-Nav"
+import Nav from "../h-Nav"
+import Vnav from "../v-Nav"
 
 export class About extends Component {
     render() {

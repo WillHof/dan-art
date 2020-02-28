@@ -4,7 +4,7 @@ export class Nav extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-sm navbar-light bg-white">
 
                     <a className="navbar-brand" href="/">Dan's Art</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

@@ -5,7 +5,7 @@ export class Vnav extends Component {
         return (
             <div>
                 <nav className="navbar navbar-light bg-white" id="VNav">
-                    <a className="navbar-brand" id="nBrand" href="/">Dan's Art</a>
+                    <a className="navbar-brand cLight" id="nBrand" href="/">Dan's Art</a>
 
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="">
                         <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>

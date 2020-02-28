@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from "./components/Home"
-import Paintings from './components/Paintings'
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Writing from "./components/Writing"
+import Home from "./components/Pages/Home"
+import Paintings from './components/Pages/Paintings'
+import About from "./components/Pages/About"
+import Contact from "./components/Pages/Contact"
+import Writing from "./components/Pages/Writing"
 class App extends Component {
 
   render() {

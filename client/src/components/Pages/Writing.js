@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Nav from "./h-Nav"
-import Vnav from "./v-Nav"
-
-export class Paintings extends Component {
+import Nav from "../h-Nav"
+import Vnav from "../v-Nav"
+export class Writing extends Component {
     render() {
         return (
             <div>
@@ -14,7 +13,7 @@ export class Paintings extends Component {
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-8 col-sm-12">  Paintings Here</div>
+                        <div className="col-md-8 col-sm-12">  Writing Here</div>
                     </div>
                 </div>
             </div>
@@ -22,4 +21,4 @@ export class Paintings extends Component {
     }
 }
 
-export default Paintings
+export default Writing
