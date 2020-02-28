@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
-import LA from "../../Large Abstractions/lg_dh1.jpg"
 export class Paintings extends Component {
     state = {
-        images: require.context("../../Large Abstractions", false, /\.(png|jpe?g|svg)$/)
+        images: []
     }
     importAll = (r) => {
         return r.keys().map(r);
@@ -25,7 +24,9 @@ export class Paintings extends Component {
                             <Nav />
                         </div>
                         <div className="col-md-6 col-sm-12 blockContainer mr-auto ml-auto">
-                            <img src={LA} alt="p1" className="paintingImage"></img>
+                            {this.state.images.map(danPainting => (
+                                <img src={danPainting} alt={danPainting.id} key={danPainting} className="paintingImage"></img>
+                            ))}
                         </div>
                         <div className="col-md-2 d-none d-sm-block"></div>
                     </div>
