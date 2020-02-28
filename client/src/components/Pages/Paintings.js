@@ -3,14 +3,18 @@ import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
 export class Paintings extends Component {
     state = {
-        images: []
+        images: [],
+        type: "Large Abstractions"
     }
     importAll = (r) => {
         return r.keys().map(r);
     }
     componentDidMount() {
-        var images = require.context("../../Large Abstractions", false, /\.(png|jpe?g|svg)$/);
-        this.setState({ images: this.importAll(images) });
+        let paths = require.context("../../Large Abstractions", false, /\.(png|jpe?g|svg)$/);
+        //combines path array with nonexistent array of objects to contain info about the paintings
+        // for (let index = 0; index < paths.length; index++) {
+        //     Object.assign(obj1[i],...paths[i])}
+        this.setState({ images: this.importAll(paths) });
     }
     render() {
         return (
