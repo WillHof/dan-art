@@ -5,7 +5,7 @@ export class Vnav extends Component {
         return (
             <div>
                 <nav className="navbar navbar-light bg-white" id="VNav">
-                    <a className="navbar-brand cLight" id="nBrand" href="/">Dan's Art</a>
+                    <a className="navbar-brand cLight" id="nBrand" href="/">DAN HOFSTADTER</a>
 
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="">
                         {/* <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
@@ -13,10 +13,17 @@ export class Vnav extends Component {
                                 Home
                                 </Link>
                         </li> */}
-                        <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
-                            <Link to="/Paintings" className="nav-link">
+                        <li className={window.location.pathname === "/Paintings" ? "nav-item dropdown-toggler active" : "nav-item dropdown-toggler"}>
+                            <span className="nav-link dropdown-toggle" id="navbarDropdown" type="button" data-toggle="collapse" data-target="#dropmenu" aria-haspopup="true" aria-expanded="false">
                                 Work
-                                </Link>
+                            </span>
+                            <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
+                                <Link to="/Paintings?SmallAbstractions" className="dropdown-item">SMALL ABSTRACTIONS</Link>
+                                <Link to="/Paintings?LargeAbstractions" className="dropdown-item" >LARGE ABSTRACTIONS</Link>
+                                <Link to="/Paintings?EarlyWork" className="dropdown-item" >EARLY WORK</Link>
+                                <Link to="/Paintings?MonotypesDrawings" className="dropdown-item" >MONOTYPES/DRAWINGS</Link>
+                                <Link to="/Paintings?InstallationViews" className="dropdown-item" >INSTALLATION VIEWS</Link>
+                            </div>
                         </li>
                         <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
                             <Link to="/About" className="nav-link">
