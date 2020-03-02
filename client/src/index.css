@@ -47,3 +47,7 @@ code {
     padding-left: 2rem
   }
 }
+.garamond{
+  font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
+  color:rgba(0,0,0,.5)
+}
