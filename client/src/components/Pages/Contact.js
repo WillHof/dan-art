@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
-import painting from "../../Large Abstractions/lg_dh1;58x50.jpg"
+import painting from "../../Large Abstractions/DH1;58x50.jpeg"
 export class Contact extends Component {
     render() {
         return (
