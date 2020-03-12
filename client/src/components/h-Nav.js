@@ -27,11 +27,11 @@ export class Nav extends Component {
                                     About the Artist
                                 </Link>
                             </li>
-                            <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
+                            {/* <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
                                 <Link to="/Writing" className="nav-link">
                                     Writing
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className={window.location.pathname === "/Contact" ? "nav-item active" : "nav-item"}>
                                 <Link to="/Contact" className="nav-link">
                                     Contact

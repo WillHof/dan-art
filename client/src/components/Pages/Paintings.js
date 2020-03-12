@@ -43,9 +43,11 @@ export class Paintings extends Component {
                         <div className="col-md-6 col-sm-12 blockContainer mr-auto ml-auto">
                             {this.state.images.map((danPainting, index) => (
                                 <div key={index}>
-                                    <img src={danPainting} alt={danPainting.id} key={danPainting} className="paintingImage"></img>
+                                    <div className="clearfix">
+                                        <img src={danPainting} alt={danPainting.id} key={danPainting} className="paintingImage float-right"></img>
+                                    </div>
                                     <div className="row">
-                                        <div className="col-12 garamond h6 text-center mb-4 mt-2" key={index}><b>{this.state.names[index]} {this.state.dims[index]}</b></div>
+                                        <div className="col-12 text-right mb-4 h6 tgray" key={index}>{this.state.names[index]} {this.state.dims[index]}</div>
                                     </div>
                                 </div>
                             ))}

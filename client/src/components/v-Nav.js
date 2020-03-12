@@ -20,8 +20,8 @@ export class Vnav extends Component {
                             <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
                                 <Link to="/Paintings?SmallAbstractions" className="dropdown-item">SMALL ABSTRACTIONS</Link>
                                 <Link to="/Paintings?LargeAbstractions" className="dropdown-item" >LARGE ABSTRACTIONS</Link>
-                                <Link to="/Paintings?EarlyWork" className="dropdown-item" >EARLY WORK</Link>
-                                <Link to="/Paintings?MonotypesDrawings" className="dropdown-item" >MONOTYPES/DRAWINGS</Link>
+                                <Link to="/Paintings?EarlyWork" className="dropdown-item" >EARLY WORK <i>(PRE-1990)</i></Link>
+                                <Link to="/Paintings?MonotypesDrawings" className="dropdown-item" >DRAWINGS/MONOTYPES</Link>
                                 <Link to="/Paintings?InstallationViews" className="dropdown-item" >INSTALLATION VIEWS</Link>
                             </div>
                         </li>
@@ -30,11 +30,11 @@ export class Vnav extends Component {
                                 About the Artist
                                 </Link>
                         </li>
-                        <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
+                        {/* <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
                             <Link to="/Writing" className="nav-link">
                                 Writing
                                 </Link>
-                        </li>
+                        </li> */}
                         <li className={window.location.pathname === "/Contact" ? "nav-item active" : "nav-item"}>
                             <Link to="/Contact" className="nav-link">
                                 Contact
