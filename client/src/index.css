@@ -16,6 +16,9 @@ code {
 .tgray{
   color:rgba(0,0,0,.5)
 }
+.indent{
+  text-indent:50px
+}
 #VNav{
   height:100vh;
   display:block
@@ -44,10 +47,15 @@ code {
   padding-top: 5.5rem;
   max-width: 600px;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
   .blockContainer{
     padding-top: 0.5rem;
     padding-left: 2rem
+  }
+}
+@media screen and (min-width:768px){
+  .navbar-brand{
+    white-space: normal;
   }
 }
 .garamond{

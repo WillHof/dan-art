@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
-import painting from "../../Large Abstractions/DH1;58x50.jpeg"
+import painting from "../../LargeAbstractions/DH1;58x50.jpeg"
 export class Contact extends Component {
     render() {
         return (
@@ -18,7 +18,7 @@ export class Contact extends Component {
                             <img src={painting} alt="Painting" id="contactImage" />
                             <div className="row">
                                 <div className="col-12">
-                                    Thank you for your interest in my work. Please contact me about pricing and/or availability of works, image reproduction permission, or other questions you might have. I'd love to hear from you!
+                                    For information about availability or prices of works, image reproduction permission, or other questions you might have. I'd love to hear from you!
                                 </div>
                             </div>
                             <div className="row">
@@ -27,23 +27,23 @@ export class Contact extends Component {
                             <form>
                                 <div className="form-row">
                                     <div className="form-group col-6">
-                                        <label for="fn">First Name:</label>
+                                        <label htmlFor="fn">First Name:</label>
                                         <input type="text" className="form-control" id="fn" />
                                     </div>
                                     <div className="form-group col-6">
-                                        <label for="ln">Last Name:</label>
+                                        <label htmlFor="ln">Last Name:</label>
                                         <input type="text" className="form-control" id="ln" />
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <label for="inputEmail">Email Address:</label>
-                                    <input type="email" class="form-control" id="inputEmail"></input>
+                                    <label htmlFor="inputEmail">Email Address:</label>
+                                    <input type="email" className="form-control" id="inputEmail"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label for="inputMessage">Message:</label>
-                                    <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+                                    <label htmlFor="inputMessage">Message:</label>
+                                    <textarea className="form-control" id="inputMessage" rows="3"></textarea>
                                 </div>
-                                <button type="submit" id="sendEmailBtn" class="btn btn-primary">Send Message</button>
+                                <button type="submit" id="sendEmailBtn" className="btn btn-primary">Send Message</button>
                             </form>
                         </div>
                         <div className="col-md-2 d-none d-sm-block"></div>
