@@ -34,7 +34,7 @@ code {
   padding-bottom: 2.6rem;
   font-size: 2.1rem;
 }
-#contactImage{
+#aboutImage{
   max-width: 100%;
   display:block;
   height:auto;
@@ -110,12 +110,26 @@ code {
   }
 }
 @media screen and (min-width:1200px){
-.blockContainer{
-  max-width: none;
+  .blockContainer{
+    max-width: none;
+  }
+  .paintingImage{
+    max-height: 900px;
+  }
 }
-.paintingImage{
-  max-height: 900px;
+@media screen and (min-width:1580px){
+  #infoWrapper{
+    max-width: 700px;
+  }
 }
+@media screen and (min-width:1800px){
+  #infoWrapper{
+    max-width: none;
+  }
+  #aboutImage{
+    float:left;
+    margin-right: 30px;
+  }
 }
 .garamond{
   font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
