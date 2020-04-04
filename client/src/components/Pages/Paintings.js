@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../h-Nav";
 import Vnav from "../v-Nav";
-import axios from "axios";
 import EarlyWork from "../../assets/EarlyWork/index";
 import SmallAbstractions from "../../assets/SmallAbstractions/index";
 import LargeAbstractions from "../../assets/LargeAbstractions/index";
@@ -9,10 +8,14 @@ import MonotypesDrawings from "../../assets/MonotypesDrawings/index";
 import InstallationViews from "../../assets/InstallationViews/index";
 
 export class Paintings extends Component {
-    state = {
-        page: "",
-        names: [],
-        dims: [],
+    constructor(props) {
+        super(props);
+        this.state = {
+            images: "",
+            names: "",
+            dims: "",
+        }
+
     }
     //code snippet which allows loading file paths of a given folder
     // importAll = (r) => {
@@ -20,12 +23,19 @@ export class Paintings extends Component {
     // }
     // let paths = this.importAll(require.context("../../assets/showPaintings", false, /\.(png|jpe?g|svg)$/));
     componentDidMount() {
-        const urlParams = new URLSearchParams(window.location.search)
-        let category = urlParams.get('category')
-        this.setState({ page: category })
-        this.getPaintings(category)
-
+        const params = new URLSearchParams(this.props.location.search)
+        let pp = params.get('category')
+        console.log(pp)
+        this.getPaintings(pp)
     }
+    componentDidUpdate(prevProps, prevState) {
+        const params = new URLSearchParams(this.props.location.search)
+        let pp = params.get('category')
+        if (this.props.location.search !== prevProps.location.search) {
+            this.getPaintings(pp)
+        }
+    }
+
     getPaintings = (category) => {
         let imagePaths = []
         if (category === "EarlyWork") {
@@ -57,6 +67,9 @@ export class Paintings extends Component {
                 dArr.push(pDims[0].substring(0, (pDims[0].length - 1)));
             }
             this.setState({ images: imagePaths, names: pArr, dims: dArr })
+        }
+        else {
+            this.setState({ images: "", names: "", dims: "" })
         }
     }
     render() {
