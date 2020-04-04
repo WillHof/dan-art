@@ -17,10 +17,17 @@ export class Nav extends Component {
                                     Home
                                 </Link>
                             </li> */}
-                            <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
-                                <Link to="/Paintings?category=SmallAbstractions" className="nav-link">
+                            <li className={window.location.pathname === "/Paintings" ? "nav-item dropdown-toggler active" : "nav-item dropdown-toggler"}>
+                                <span className="nav-link dropdown-toggle" id="navbarDropdown" type="button" data-toggle="collapse" data-target="#dropmenu" aria-haspopup="true" aria-expanded="false">
                                     Work
-                                </Link>
+                            </span>
+                                <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
+                                    <Link to="/Paintings?category=SmallAbstractions" className="dropdown-item">SMALL ABSTRACTIONS</Link>
+                                    <Link to="/Paintings?category=LargeAbstractions" className="dropdown-item" >LARGE ABSTRACTIONS</Link>
+                                    <Link to="/Paintings?category=EarlyWork" className="dropdown-item" >EARLY WORK <i>(PRE-1990)</i></Link>
+                                    <Link to="/Paintings?category=MonotypesDrawings" className="dropdown-item" >DRAWINGS/MONOTYPES</Link>
+                                    <Link to="/Paintings?category=InstallationViews" className="dropdown-item" >INSTALLATION VIEWS</Link>
+                                </div>
                             </li>
                             <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
                                 <Link to="/About" className="nav-link">
