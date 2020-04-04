@@ -14,28 +14,17 @@ export class Paintings extends Component {
         names: [],
         dims: [],
     }
-    importAll = (r) => {
-        return r.keys().map(r);
-    }
+    //code snippet which allows loading file paths of a given folder
+    // importAll = (r) => {
+    //     return r.keys().map(r);
+    // }
+    // let paths = this.importAll(require.context("../../assets/showPaintings", false, /\.(png|jpe?g|svg)$/));
     componentDidMount() {
         const urlParams = new URLSearchParams(window.location.search)
         let category = urlParams.get('category')
         this.setState({ page: category })
         this.getPaintings(category)
-        // this.setState({ images: this.getPaintings(page) })
-        // let paths = this.importAll(require.context("../../assets/showPaintings", false, /\.(png|jpe?g|svg)$/));
-        // let namePath = /[\w-]+;/;
-        // let dimPath = /[\dx\d]+\./;
-        // let pArr = [];
-        // let dArr = [];
-        // for (let index = 0; index < paths.length; index++) {
-        //     const element = paths[index];
-        //     let pName = element.match(namePath).pop();
-        //     let pDims = element.match(dimPath).pop();
-        //     pArr.push(pName.substring(0, (pName.length - 1)));
-        //     dArr.push(pDims.substring(0, (pDims.length - 1)));
-        // }
-        // this.setState({ images: paths, names: pArr, dims: dArr });
+
     }
     getPaintings = (category) => {
         let imagePaths = []
@@ -44,21 +33,17 @@ export class Paintings extends Component {
         };
         if (category === "LargeAbstractions") {
             imagePaths = LargeAbstractions
-            console.log("la")
         };
         if (category === "SmallAbstractions") {
             imagePaths = SmallAbstractions
-            console.log('sa')
         };
         if (category === "MonotypesDrawings") {
             imagePaths = MonotypesDrawings
-            console.log('md')
         }
         if (category === "InstallationViews") {
             imagePaths = InstallationViews
-            console.log('iv')
         }
-        //add other categories here
+
         let namePath = /[\w-]+;/;
         let dimPath = /[\d.*x\d]+\./;
         let pArr = [];
@@ -90,7 +75,6 @@ export class Paintings extends Component {
                                 <div key={index}>
                                     <div className="clearfix">
                                         <img src={danPainting} alt={danPainting.id} key={danPainting} className="paintingImage float-right"></img>
-                                        {/* <img src={'/client/src/' + this.state.type + '/' + danPainting} alt={danPainting.id} key={danPainting} className="paintingImage float-right"></img> */}
                                     </div>
                                     <div className="row">
                                         <div className="col-12 text-right mb-4 h6 tgray" key={index}>{this.state.names[index]} {this.state.dims[index]}</div>
