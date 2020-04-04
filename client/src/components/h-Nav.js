@@ -6,11 +6,11 @@ export class Nav extends Component {
             <div>
                 <nav className="navbar navbar-expand-sm navbar-light bg-white">
 
-                    <a className="navbar-brand" href="/">Dan's Art</a>
+                    <a className="navbar-brand quicksand" href="/">DAN HOFSTADTER</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <div className="collapse navbar-collapse quicksand" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             {/* <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
                                 <Link to="/" className="nav-link">

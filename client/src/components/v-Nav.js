@@ -4,8 +4,8 @@ export class Vnav extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-light bg-white" id="VNav">
-                    <a className="navbar-brand cLight" id="nBrand" href="/">DAN HOFSTADTER</a>
+                <nav className="navbar navbar-light bg-white quicksand" id="VNav">
+                    <a className="navbar-brand" id="nBrand" href="/">DAN HOFSTADTER</a>
 
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="">
                         {/* <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
