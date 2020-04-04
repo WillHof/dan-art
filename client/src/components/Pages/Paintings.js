@@ -26,7 +26,6 @@ export class Paintings extends Component {
         const params = new URLSearchParams(this.props.location.search)
         let pp = params.get('category')
         pp ? this.getPaintings(pp) : this.getPaintings("SmallAbstractions")
-
     }
     componentDidUpdate(prevProps, prevState) {
         const params = new URLSearchParams(this.props.location.search)
@@ -83,14 +82,14 @@ export class Paintings extends Component {
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-6 col-sm-12 blockContainer mr-auto ml-auto">
+                        <div className="col-md-6 col-sm-12 col-lg-4 blockContainer mr-auto ml-auto">
                             {this.state.images ? this.state.images.map((danPainting, index) => (
                                 <div key={index}>
                                     <div className="clearfix">
                                         <img src={danPainting} alt={danPainting.id} key={danPainting} className="paintingImage float-right"></img>
                                     </div>
                                     <div className="row">
-                                        <div className="col-12 text-right mb-4 h6 tgray" key={index}>{this.state.names[index]} {this.state.dims[index]}</div>
+                                        <div className="col-12 text-right mb-4 h6 tgray pDesc" key={index}>{this.state.names[index]} {this.state.dims[index]}</div>
                                     </div>
                                 </div>
                             )) :

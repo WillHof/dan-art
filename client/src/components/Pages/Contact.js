@@ -14,8 +14,8 @@ export class Contact extends Component {
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-6 col-sm-12 blockContainer mr-auto ml-auto">
-                            <img src={painting} alt="Painting" id="contactImage" />
+                        <div className="col-md-6 col-sm-12 col-lg-4 blockContainer mr-auto ml-auto">
+                            <img src={painting} alt="Painting" classname="paintingImage" />
                             <div className="row">
                                 <div className="col-12">
                                     For information about availability or prices of works, image reproduction permission, or other questions you might have. I'd love to hear from you!

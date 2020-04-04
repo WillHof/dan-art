@@ -109,6 +109,14 @@ code {
     white-space: normal;
   }
 }
+@media screen and (min-width:1200px){
+.blockContainer{
+  max-width: none;
+}
+.paintingImage{
+  max-height: 900px;
+}
+}
 .garamond{
   font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
   color:rgba(0,0,0,.5)
