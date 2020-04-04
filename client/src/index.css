@@ -13,6 +13,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.baloo{
+  font-family: 'Baloo 2', cursive;
+}
+.baskerville{
+
+}
 .tgray{
   color:rgba(0,0,0,.5)
 }
@@ -46,6 +52,51 @@ code {
   padding-right: 3rem;
   padding-top: 5.5rem;
   max-width: 600px;
+}
+.no-m{
+  margin:0px;
+  padding:0px;
+}
+.home-wrapper{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  box-sizing:border-box
+}
+.fp-wrapper{
+  height:100%;
+  position:relative;
+}
+.tx-wrapper{
+  text-align:center;
+  position:relative;
+  box-sizing:border-box;
+  height:100%
+}
+.title-group{
+  position: absolute;
+  left:60px;
+  right:60px;
+  margin:auto,0;
+  top:50%;
+  transform:translateY(-50%)
+}
+#danTitle{
+  color:white;
+  font-size: 4rem;
+}
+#danSub{
+  color:white;
+  font-size: 3rem;
+}
+#home{
+  width: 100%;
+    height: 100%;
+    object-position: 50% 0%;
+    object-fit: cover;
 }
 @media screen and (max-width:767px){
   .blockContainer{
