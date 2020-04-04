@@ -18,11 +18,11 @@ export class Vnav extends Component {
                                 Work
                             </span>
                             <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
-                                <Link to="/Paintings?page=SmallAbstractions" className="dropdown-item">SMALL ABSTRACTIONS</Link>
-                                <Link to="/Paintings?page=LargeAbstractions" className="dropdown-item" >LARGE ABSTRACTIONS</Link>
-                                <Link to="/Paintings?page=EarlyWork" className="dropdown-item" >EARLY WORK <i>(PRE-1990)</i></Link>
-                                <Link to="/Paintings?page=MonotypesDrawings" className="dropdown-item" >DRAWINGS/MONOTYPES</Link>
-                                <Link to="/Paintings?page=InstallationViews" className="dropdown-item" >INSTALLATION VIEWS</Link>
+                                <Link to="/Paintings?category=SmallAbstractions" className="dropdown-item">SMALL ABSTRACTIONS</Link>
+                                <Link to="/Paintings?category=LargeAbstractions" className="dropdown-item" >LARGE ABSTRACTIONS</Link>
+                                <Link to="/Paintings?category=EarlyWork" className="dropdown-item" >EARLY WORK <i>(PRE-1990)</i></Link>
+                                <Link to="/Paintings?category=MonotypesDrawings" className="dropdown-item" >DRAWINGS/MONOTYPES</Link>
+                                <Link to="/Paintings?category=InstallationViews" className="dropdown-item" >INSTALLATION VIEWS</Link>
                             </div>
                         </li>
                         <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
