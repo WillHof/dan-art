@@ -18,7 +18,7 @@ export class Nav extends Component {
                                 </Link>
                             </li> */}
                             <li className={window.location.pathname === "/Paintings" ? "nav-item active" : "nav-item"}>
-                                <Link to="/Paintings" className="nav-link">
+                                <Link to="/Paintings?category=SmallAbstractions" className="nav-link">
                                     Work
                                 </Link>
                             </li>

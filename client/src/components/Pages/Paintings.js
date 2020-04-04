@@ -25,8 +25,8 @@ export class Paintings extends Component {
     componentDidMount() {
         const params = new URLSearchParams(this.props.location.search)
         let pp = params.get('category')
-        console.log(pp)
-        this.getPaintings(pp)
+        pp ? this.getPaintings(pp) : this.getPaintings("SmallAbstractions")
+
     }
     componentDidUpdate(prevProps, prevState) {
         const params = new URLSearchParams(this.props.location.search)
