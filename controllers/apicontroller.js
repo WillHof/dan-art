@@ -13,8 +13,10 @@ module.exports = {
         const mailOptions = {
             from: 'danSite@noreply.com',
             to: 'whof@bu.edu',
-            subject: 'testing subject',
-            text: 'body here'
+            subject: 'Inquiry from Dan\'s Site',
+            text: 'From: ' + req.body.fn + ' ' + req.body.ln + 'Email: ' + req.body.email + '\
+            \
+            '+ req.body.message
         };
         transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
