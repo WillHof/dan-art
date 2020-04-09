@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Nav from "../h-Nav";
 import Vnav from "../v-Nav";
 import EarlyWork from "../../assets/EarlyWork/index";
+import RecentWork from "../../assets/RecentWork/index";
 import SmallAbstractions from "../../assets/SmallAbstractions/index";
 import LargeAbstractions from "../../assets/LargeAbstractions/index";
 import MonotypesDrawings from "../../assets/MonotypesDrawings/index";
@@ -48,9 +49,12 @@ export class Paintings extends Component {
         };
         if (category === "MonotypesDrawings") {
             imagePaths = MonotypesDrawings
-        }
+        };
         if (category === "InstallationViews") {
             imagePaths = InstallationViews
+        };
+        if (category === "RecentWork") {
+            imagePaths = RecentWork
         }
 
         let namePath = /(\w|(\w+\s)*)+;/;
