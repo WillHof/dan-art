@@ -19,19 +19,19 @@ export class Nav extends Component {
                             </li> */}
                             <li className={window.location.pathname === "/Paintings" ? "nav-item dropdown-toggler active" : "nav-item dropdown-toggler"}>
                                 <span className="nav-link dropdown-toggle" id="navbarDropdown" type="button" data-toggle="collapse" data-target="#dropmenu" aria-haspopup="true" aria-expanded="false">
-                                    Work
+                                    WORK
                             </span>
                                 <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
-                                    <Link to="/Paintings?category=SmallAbstractions" className="dropdown-item">SMALL ABSTRACTIONS</Link>
-                                    <Link to="/Paintings?category=LargeAbstractions" className="dropdown-item" >LARGE ABSTRACTIONS</Link>
-                                    <Link to="/Paintings?category=EarlyWork" className="dropdown-item" >EARLY WORK <i>(PRE-1990)</i></Link>
-                                    <Link to="/Paintings?category=MonotypesDrawings" className="dropdown-item" >DRAWINGS/MONOTYPES</Link>
-                                    <Link to="/Paintings?category=InstallationViews" className="dropdown-item" >INSTALLATION VIEWS</Link>
+                                    <Link to="/Paintings?category=SmallAbstractions" className="dropdown-item">Small Abstractions</Link>
+                                    <Link to="/Paintings?category=LargeAbstractions" className="dropdown-item" >Large Abstractions</Link>
+                                    <Link to="/Paintings?category=EarlyWork" className="dropdown-item" >Early Work <i>(Pre-1990)</i></Link>
+                                    <Link to="/Paintings?category=MonotypesDrawings" className="dropdown-item" >Drawings</Link>
+                                    <Link to="/Paintings?category=InstallationViews" className="dropdown-item" >Installation Views</Link>
                                 </div>
                             </li>
                             <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
                                 <Link to="/About" className="nav-link">
-                                    About the Artist
+                                    ABOUT THE ARTIST
                                 </Link>
                             </li>
                             {/* <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
@@ -41,7 +41,7 @@ export class Nav extends Component {
                             </li> */}
                             <li className={window.location.pathname === "/Contact" ? "nav-item active" : "nav-item"}>
                                 <Link to="/Contact" className="nav-link">
-                                    Contact
+                                    CONTACT
                                 </Link>
                             </li>
                         </ul>

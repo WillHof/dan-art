@@ -20,12 +20,9 @@ export class Contact extends Component {
                         <div className="col-md-6 col-sm-12 col-lg-4 blockContainer mr-auto ml-auto">
                             <img src={painting} alt="Painting" className="paintingImage" />
                             <div className="row">
-                                <div className="col-12">
-                                    For information about availability or prices of works, image reproduction permission, or other questions you might have. I'd love to hear from you!
+                                <div className="col-12 baskerville">
+                                    Those wishing to inquire about prices or to purchase pieces should use the form below for a prompt response.
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12">Dan</div>
                             </div>
                             <EmailForm />
                         </div>

@@ -33,8 +33,8 @@ export class EmailForm extends Component {
                 <form onSubmit={this.onClick}>
                     <div className="form-row">
                         <div className="form-group col-6">
-                            <label htmlFor="fn">First Name:</label>
-                            <input type="text" className="form-control" id="fn" value={this.state.fn} onChange={this.handleChange} />
+                            {/* <label htmlFor="fn">First Name:</label> */}
+                            <input type="text" className="form-control" id="fn" value={this.state.fn} placeholder="FIRST NAME" onChange={this.handleChange} />
                         </div>
                         <div className="form-group col-6">
                             <label htmlFor="ln">Last Name:</label>
