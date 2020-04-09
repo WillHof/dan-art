@@ -13,6 +13,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.noDec{
+  text-decoration: none;
+}
 .baloo{
   font-family: 'Baloo 2', cursive;
 }

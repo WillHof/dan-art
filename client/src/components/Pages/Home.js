@@ -16,8 +16,10 @@ export class Home extends Component {
                     <div className="home-wrapper">
                         <div className="tx-wrapper">
                             <div className="title-group">
-                                <div><Link to="/Paintings?category=SmallAbstractions" id="danTitle" className="quicksand">DAN HOFSTADTER</Link></div>
-                                <div> <Link to="/Paintings?category=SmallAbstractions" id="danSub" className="baskerville"><i>p a i n t i n g s</i></Link></div>
+                                <Link to="/Paintings?category=SmallAbstractions" style={{ textDecoration: "none" }}>
+                                    <div id="danTitle" className="quicksand">DAN HOFSTADTER</div>
+                                    <div id="danSub" className="baskerville"><i>p a i n t i n g s</i></div>
+                                </Link>
                             </div>
                         </div>
                     </div>
