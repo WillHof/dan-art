@@ -22,9 +22,10 @@ export class Nav extends Component {
                                     WORK
                             </span>
                                 <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
+                                    <Link to="/Paintings?category=RecentWork" className={window.location.search === "?category=RecentWork" ? "dropdown-item" : "dropdown-item tgray"}>Recent Work</Link>
                                     <Link to="/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item" : "dropdown-item tgray"}>Small Abstractions</Link>
                                     <Link to="/Paintings?category=LargeAbstractions" className={window.location.search === "?category=LargeAbstractions" ? "dropdown-item" : "dropdown-item tgray"} >Large Abstractions</Link>
-                                    <Link to="/Paintings?category=EarlyWork" className={window.location.search === "?category=EarlyWork" ? "dropdown-item" : "dropdown-item tgray"} >Early Work <i>(Pre-1990)</i></Link>
+                                    <Link to="/Paintings?category=EarlyWork" className={window.location.search === "?category=EarlyWork" ? "dropdown-item" : "dropdown-item tgray"} >Early Work <i>(1970-1990)</i></Link>
                                     <Link to="/Paintings?category=MonotypesDrawings" className={window.location.search === "?category=MonotypesDrawings" ? "dropdown-item" : "dropdown-item tgray"} >Drawings</Link>
                                     <Link to="/Paintings?category=InstallationViews" className={window.location.search === "?category=InstallationViews" ? "dropdown-item" : "dropdown-item tgray"} >Installation Views</Link>
                                 </div>

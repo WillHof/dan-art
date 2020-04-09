@@ -94,7 +94,7 @@ export class Paintings extends Component {
                                 </div>
                             )) :
                                 <div className="col-md-6 col-sm-12 blockContainer mr-auto ml-auto">
-                                    This section is under construction
+                                    There are no paintings here yet.
                             </div>}
                         </div>
                         <div className="col-md-2 d-none d-sm-block"></div>
