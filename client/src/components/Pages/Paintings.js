@@ -86,7 +86,7 @@ export class Paintings extends Component {
                             {this.state.images ? this.state.images.map((danPainting, index) => (
                                 <div key={index}>
                                     <div className="clearfix">
-                                        <img src={danPainting} alt={danPainting.id} key={danPainting} className="paintingImage float-right"></img>
+                                        <img src={danPainting} alt={danPainting.id} key={danPainting} data-toggle="modal" data-target={"#p" + index} className="paintingImage float-right"></img>
                                     </div>
                                     <div className="row">
                                         <div className="col-12 text-right mb-4 h6 tgray pDesc" key={index}>{this.state.names[index]} {this.state.dims[index]}</div>
@@ -100,6 +100,20 @@ export class Paintings extends Component {
                         <div className="col-md-2 d-none d-sm-block"></div>
                     </div>
                 </div>
+                {this.state.images ? this.state.images.map((danPainting, index) => (
+                    <div className="modal fade" id={"p" + index} key={"k" + index} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-body d-flex justify-content-center">
+                                    <img src={danPainting} alt={danPainting.id} data-dismiss="modal" className="modalImage" aria-label="Close"></img>
+                                    {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button> */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>)) : null}
+
             </div>
         )
     }
