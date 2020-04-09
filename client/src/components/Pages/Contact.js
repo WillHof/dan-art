@@ -17,10 +17,10 @@ export class Contact extends Component {
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-6 col-sm-12 col-lg-4 blockContainer mr-auto ml-auto">
-                            <img src={painting} alt="Painting" className="paintingImage" />
+                        <div className="col-md-6 col-sm-12 col-lg-5 blockContainer mr-auto ml-auto">
+                            <img src={painting} alt="Painting" id="aboutImage" className="paintingImage" />
                             <div className="row">
-                                <div className="col-12 baskerville">
+                                <div className="col-12 mt-2 mb-2 baskerville">
                                     Those wishing to inquire about prices or to purchase pieces should use the form below for a prompt response.
                                 </div>
                             </div>

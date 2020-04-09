@@ -32,24 +32,20 @@ export class EmailForm extends Component {
             <div>
                 <form onSubmit={this.onClick}>
                     <div className="form-row">
-                        <div className="form-group col-6">
-                            {/* <label htmlFor="fn">First Name:</label> */}
+                        <div className="form-group mb-2 col-6">
                             <input type="text" className="form-control" id="fn" value={this.state.fn} placeholder="FIRST NAME" onChange={this.handleChange} />
                         </div>
-                        <div className="form-group col-6">
-                            <label htmlFor="ln">Last Name:</label>
-                            <input type="text" className="form-control" id="ln" value={this.state.ln} onChange={this.handleChange} />
+                        <div className="form-group mb-2 col-6">
+                            <input type="text" className="form-control" id="ln" value={this.state.ln} placeholder="LAST NAME" onChange={this.handleChange} />
                         </div>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="inputEmail">Email Address:</label>
-                        <input type="email" className="form-control" id="email" value={this.state.email} onChange={this.handleChange}></input>
+                    <div className="form-group mb-2">
+                        <input type="email" className="form-control" id="email" value={this.state.email} placeholder="email@example.com" onChange={this.handleChange}></input>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="inputMessage">Message:</label>
-                        <textarea className="form-control" id="message" rows="3" value={this.state.message} onChange={this.handleChange}></textarea>
+                        <textarea className="form-control" id="message" rows="3" value={this.state.message} placeholder="Your message here" onChange={this.handleChange}></textarea>
                     </div>
-                    <button type="submit" id="sendEmailBtn" className="btn btn-primary">Send Message</button>
+                    <button type="submit" id="sendEmailBtn" className="btn btn-primary mb-4">Send Message</button>
                 </form>
             </div>
         )

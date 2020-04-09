@@ -22,11 +22,11 @@ export class Nav extends Component {
                                     WORK
                             </span>
                                 <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
-                                    <Link to="/Paintings?category=SmallAbstractions" className="dropdown-item">Small Abstractions</Link>
-                                    <Link to="/Paintings?category=LargeAbstractions" className="dropdown-item" >Large Abstractions</Link>
-                                    <Link to="/Paintings?category=EarlyWork" className="dropdown-item" >Early Work <i>(Pre-1990)</i></Link>
-                                    <Link to="/Paintings?category=MonotypesDrawings" className="dropdown-item" >Drawings</Link>
-                                    <Link to="/Paintings?category=InstallationViews" className="dropdown-item" >Installation Views</Link>
+                                    <Link to="/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item active" : "dropdown-item"}>Small Abstractions</Link>
+                                    <Link to="/Paintings?category=LargeAbstractions" className={window.location.search === "?category=LargeAbstractions" ? "dropdown-item active" : "dropdown-item"} >Large Abstractions</Link>
+                                    <Link to="/Paintings?category=EarlyWork" className={window.location.search === "?category=EarlyWork" ? "dropdown-item active" : "dropdown-item"} >Early Work <i>(Pre-1990)</i></Link>
+                                    <Link to="/Paintings?category=MonotypesDrawings" className={window.location.search === "?category=MonotypesDrawings" ? "dropdown-item active" : "dropdown-item"} >Drawings</Link>
+                                    <Link to="/Paintings?category=InstallationViews" className={window.location.search === "?category=InstallationViews" ? "dropdown-item active" : "dropdown-item"} >Installation Views</Link>
                                 </div>
                             </li>
                             <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
