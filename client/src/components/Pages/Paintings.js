@@ -53,7 +53,7 @@ export class Paintings extends Component {
             imagePaths = InstallationViews
         }
 
-        let namePath = /[\w-]+;/;
+        let namePath = /(\w|(\w+\s)*)+;/;
         let dimPath = /[\d.*x\d]+\./;
         let pArr = [];
         let dArr = [];
