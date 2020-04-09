@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
-import painting from "../../assets/LargeAbstractions/DH1;58x50.jpeg"
+import painting from "../../assets/LargeAbstractions/DH1;50x58.jpeg"
 import EmailForm from "../EmailForm"
 export class Contact extends Component {
 

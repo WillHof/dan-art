@@ -21,11 +21,11 @@ export class Vnav extends Component {
                                 WORK
                             </span>
                             <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
-                                <Link to="/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item active" : "dropdown-item"}>Small Abstractions</Link>
-                                <Link to="/Paintings?category=LargeAbstractions" className={window.location.search === "?category=LargeAbstractions" ? "dropdown-item active" : "dropdown-item"} >Large Abstractions</Link>
-                                <Link to="/Paintings?category=EarlyWork" className={window.location.search === "?category=EarlyWork" ? "dropdown-item active" : "dropdown-item"} >Early Work <i>(Pre-1990)</i></Link>
-                                <Link to="/Paintings?category=MonotypesDrawings" className={window.location.search === "?category=MonotypesDrawings" ? "dropdown-item active" : "dropdown-item"} >Drawings</Link>
-                                <Link to="/Paintings?category=InstallationViews" className={window.location.search === "?category=InstallationViews" ? "dropdown-item active" : "dropdown-item"} >Installation Views</Link>
+                                <Link to="/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item" : "dropdown-item tgray"}>Small Abstractions</Link>
+                                <Link to="/Paintings?category=LargeAbstractions" className={window.location.search === "?category=LargeAbstractions" ? "dropdown-item" : "dropdown-item tgray"} >Large Abstractions</Link>
+                                <Link to="/Paintings?category=EarlyWork" className={window.location.search === "?category=EarlyWork" ? "dropdown-item" : "dropdown-item tgray"} >Early Work <i>(Pre-1990)</i></Link>
+                                <Link to="/Paintings?category=MonotypesDrawings" className={window.location.search === "?category=MonotypesDrawings" ? "dropdown-item" : "dropdown-item tgray"} >Drawings</Link>
+                                <Link to="/Paintings?category=InstallationViews" className={window.location.search === "?category=InstallationViews" ? "dropdown-item" : "dropdown-item tgray"} >Installation Views</Link>
                             </div>
                         </li>
                         <li className={window.location.pathname === "/About" ? "nav-item active" : "nav-item"}>
