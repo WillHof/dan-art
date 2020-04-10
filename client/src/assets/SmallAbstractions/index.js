@@ -5,7 +5,6 @@ export const SmallAbstractions = [
     require('./DH11;18.5x13.jpg'),
     require('./DH13;10.5x9.5.jpg'),
     require('./DH17;19x26.jpeg'),
-    require('./DH20;18x18.jpeg'),
     require('./DH7;11.5x18.5.jpg'),
 ]
 export default SmallAbstractions

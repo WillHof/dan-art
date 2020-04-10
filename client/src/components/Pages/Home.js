@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import homeBG from "../../assets/Home/DH home page art B.jpg"
+import homeBG from "../../assets/Home/DH home page art A.jpeg"
 export class Home extends Component {
     render() {
         return (

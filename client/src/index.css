@@ -87,6 +87,9 @@ code {
   top:50%;
   transform:translateY(-50%)
 }
+.modal{
+  background:rgba(0,0,0,.9)
+}
 .modalImage{
   max-width:90vw;
   max-height:90vh;
@@ -100,6 +103,7 @@ code {
 .modal-body{
   max-height:90vh
 }
+
 @media (min-width: 576px){
 .modal-dialog {
     max-width: 90vw;
@@ -136,23 +140,18 @@ code {
     max-width: none;
   }
   .paintingImage{
-    max-height: 900px;
+    max-height: 70vh;
+  }
+  #aboutImage{
+    max-height:60vh
   }
 }
-@media screen and (min-width:1580px){
+/* @media screen and (min-width:1580px){
   #infoWrapper{
     max-width: 700px;
   }
-}
-@media screen and (min-width:1800px){
-  #infoWrapper{
-    max-width: none;
-  }
-  #aboutImage{
-    float:left;
-    margin-right: 30px;
-  }
-}
+} */
+
 .baskerville{
   font-family: 'Libre Baskerville', serif;
 }
