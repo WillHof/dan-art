@@ -18,7 +18,7 @@ export class Home extends Component {
                             <div className="title-group">
                                 <Link to="/Paintings?category=SmallAbstractions" style={{ textDecoration: "none" }}>
                                     <div id="danTitle" className="quicksand">DAN HOFSTADTER</div>
-                                    <div id="danSub" className="baskerville"><i>p a i n t i n g s</i></div>
+                                    <div id="danSub" className="baskerville" style={{ fontSize: '3.6rem', color: 'white' }}><i>p a i n t i n g s</i></div>
                                 </Link>
                             </div>
                         </div>

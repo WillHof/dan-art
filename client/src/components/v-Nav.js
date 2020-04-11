@@ -7,7 +7,7 @@ export class Vnav extends Component {
                 <nav className="navbar navbar-light bg-white quicksand" id="VNav">
                     <a className="navbar-brand" id="nBrand" href="/">
                         <div className="quicksand">DAN HOFSTADTER</div>
-                        <div className="baskerville"><i>p a i n t i n g s</i></div>
+                        <div className="baskerville" id="danSub"><i>p a i n t i n g s</i></div>
                     </a>
 
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="">

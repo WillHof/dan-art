@@ -86,7 +86,7 @@ export class Paintings extends Component {
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-6 col-sm-12 blockContainer mr-auto ml-auto">
+                        <div className="col-md-7 col-sm-12 col-xl-6 blockContainer mr-auto ml-auto">
                             {this.state.images ? this.state.images.map((danPainting, index) => (
                                 <div key={index}>
                                     <div className="clearfix">
