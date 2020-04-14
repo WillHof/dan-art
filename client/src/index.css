@@ -197,12 +197,17 @@ button,
     white-space: normal;
   }
 }
+@media screen and (min-width:992px){
+  .blockContainer{
+    margin-left: 0;
+  }
+}
 @media screen and (min-width:1200px){
   .blockContainer{
     max-width: none;
   }
   .paintingImage{
-    max-height: 60vh;
+    max-height: 80vh;
   }
   #aboutImage{
     max-height:60vh

@@ -86,14 +86,17 @@ export class Paintings extends Component {
         return (
             <div>
                 <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-3 d-none d-md-block">
-                            <Vnav />
-                        </div>
-                        <div className="d-block d-md-none col-sm-12">
+                    <div className="row d-block d-md-none">
+                        <div className="col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-7 col-sm-12 col-xl-6 blockContainer mr-auto ml-auto">
+                    </div>
+                    <div className="row">
+                        <div className="d-none d-md-block col-md-4 col-lg-3 col-xl-3">
+                            <Vnav />
+                        </div>
+
+                        <div className="col-sm-12 col-md-8 col-xl-7 blockContainer mr-auto ml-auto">
                             {this.state.images ? this.state.images.map((danPainting, index) => (
                                 <div key={index}>
                                     <div className="clearfix">
@@ -104,11 +107,11 @@ export class Paintings extends Component {
                                     </div>
                                 </div>
                             )) :
-                                <div className="col-md-6 col-sm-12 blockContainer mr-auto ml-auto">
+                                <div className="col-md-6 col-sm-11 blockContainer mr-auto ml-auto">
                                     There are no paintings here yet.
                             </div>}
                         </div>
-                        <div className="col-md-2 d-none d-sm-block"></div>
+                        <div className="d-none d-lg-block col-lg-1 col-xl-2"></div>
                     </div>
                 </div>
 
