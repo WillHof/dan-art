@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,6 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
+
 .noDec{
   text-decoration: none;
 }
@@ -24,6 +33,9 @@ code {
 }
 .tgray{
   color:rgba(0,0,0,.5)
+}
+.tgray5{
+  color:rgba(0,0,0,.4)
 }
 .indent{
   text-indent:50px
@@ -90,7 +102,7 @@ code {
   line-height:1.2
 }
 .modal{
-  background:rgba(0,0,0,.9)
+  background:rgba(0,0,0,.95)
 }
 .modalImage{
   max-width:90vw;

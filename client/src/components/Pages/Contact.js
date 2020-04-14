@@ -11,16 +11,18 @@ export class Contact extends Component {
             <div>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-3 d-none d-md-block">
+                        <div className="col-md-4 d-none d-md-block">
                             <Vnav />
                         </div>
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-6 col-sm-12 col-lg-5 blockContainer mr-auto ml-auto">
-                            <img src={painting} alt="Painting" id="aboutImage" className="paintingImage" />
+                        <div className="col-md-6 col-sm-12  blockContainer mr-auto ml-auto">
+                            <div id="slideShow">
+                                <img src={painting} alt="Painting" id="aboutImage" />
+                            </div>
                             <div className="row">
-                                <div className="col-12 mt-2 mb-2 baskerville">
+                                <div className="col-12 mt-3 mb-3 baskerville">
                                     Those wishing to inquire about prices or to purchase pieces should use the form below for a prompt response.
                                 </div>
                             </div>

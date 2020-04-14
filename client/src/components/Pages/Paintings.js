@@ -107,9 +107,9 @@ export class Paintings extends Component {
                 {this.state.images ? this.state.images.map((danPainting, index) => (
                     <div className="modal fade" id={"p" + index} key={"k" + index} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
-                            <div className="modal-content">
+                            <div className="modal-content" data-dismiss="modal" aria-label="Close">
                                 <div className="modal-body d-flex justify-content-center">
-                                    <img src={danPainting} alt={danPainting.id} data-dismiss="modal" className="modalImage" aria-label="Close"></img>
+                                    <img src={danPainting} alt={danPainting.id} className="modalImage"></img>
                                     {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button> */}
