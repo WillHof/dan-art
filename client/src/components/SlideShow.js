@@ -68,7 +68,7 @@ export class SlideShow extends Component {
         if (x < 0) {
             this.setState({ index: this.state.images.length - 1 })
         }
-        if (x > this.state.images.length - 1) {
+        else if (x > this.state.images.length - 1) {
             this.setState({ index: 0 })
         }
         else {

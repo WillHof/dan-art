@@ -101,9 +101,9 @@ button,
 }
 .blockContainer{
   text-align: left;
-  padding-left: 3rem;
+  /* padding-left: 3rem; */
   /* padding-right: 3rem; */
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   max-width: 600px;
 }
 .no-m{
@@ -185,7 +185,6 @@ button,
 @media screen and (max-width:767px){
   .blockContainer{
     padding-top: 0.5rem;
-    padding-left: 2rem
   }
 }
 @media  screen and (max-width:810px) and (min-width:768px){
