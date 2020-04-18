@@ -41,18 +41,19 @@ export class SlideShow extends Component {
         if (category === "RecentWork") {
             imagePaths = RecentWork
         }
-
-        let namePath = /(\w|(\w+\s)*)+;/;
-        let dimPath = /[\d.*x\d]+\./;
+        // /[a+\/.*+;] /;
+        // /;[\d.*x\d]+\./;
+        let namePath = /a\/[^;]*/;
+        let dimPath = /;[^;]*/;
         let pArr = [];
         let dArr = [];
         if (imagePaths.length) {
             for (let index = 0; index < imagePaths.length; index++) {
                 const element = imagePaths[index];
-                let pName = element.match(namePath);
-                let pDims = element.match(dimPath);
-                pArr.push(pName[0].substring(0, (pName[0].length - 1)));
-                dArr.push(pDims[0].substring(0, (pDims[0].length - 1)));
+                let pName = element.match(namePath)[0].substring(2).replace(/\^/g, "#");
+                let pDims = element.match(dimPath)[0].substring(1).replace(/-/g, " ").replace(/_/g, "/");
+                pArr.push(pName);
+                dArr.push(pDims);
             }
             this.setState({ images: imagePaths, names: pArr, dims: dArr })
         }
