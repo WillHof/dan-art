@@ -1,7 +1,7 @@
 {
   "name": "dan-art",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website for displaying Dan Hofstadter's paintings.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,15 +11,17 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run start;npm run build"
+    "heroku-postbuild": "npm run start && npm run build"
   },
-  "author": "",
+  "author": "Will Hofstadter",
+  "homepage": "https://github.com/WillHof/dan-art",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
     "concurrently": "^5.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "nodemailer": "^6.4.6",
     "serve-index": "^1.9.1"
   },
