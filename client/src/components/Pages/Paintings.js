@@ -26,6 +26,7 @@ export class Paintings extends Component {
     // let paths = this.importAll(require.context("../../assets/showPaintings", false, /\.(png|jpe?g|svg)$/));
     componentDidMount() {
         const params = new URLSearchParams(this.props.location.search)
+        //gets search parameters if they exist
         let pp = params.get('category')
         pp ? this.getPaintings(pp) : this.getPaintings("SmallAbstractions")
     }

@@ -19,7 +19,8 @@ export class SlideShow extends Component {
         this.onClick = this.onClick.bind(this)
     }
     componentDidMount() {
-        this.getPaintings("SmallAbstractions")
+        let src = this.state.images[this.state.index]
+        src ? this.getPaintings("SmallAbstractions") : this.getPaintings("SmallAbstractions")
     }
     getPaintings = (category) => {
         let imagePaths = []
@@ -85,7 +86,7 @@ export class SlideShow extends Component {
                             </div>
                         </div>
                         <div className="stuff col-10">
-                            <img src={this.state.images[this.state.index]} id="slideImage" alt={this.state.names[this.state.index]} />
+                            <img src={this.state.images[this.state.index]} id="danSlideImage" alt={this.state.names[this.state.index]} />
                         </div>
                         <div className="arrowContainerR col-1" value={1} onClick={this.onClick}>
                             <div id="rightArrow" value={1}>
