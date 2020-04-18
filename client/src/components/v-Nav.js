@@ -11,11 +11,6 @@ export class Vnav extends Component {
                     </a>
 
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="">
-                        {/* <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
-                            <Link to="/" className="nav-link">
-                                Home
-                                </Link>
-                        </li> */}
                         <li className={window.location.pathname === "/Paintings" ? "nav-item dropdown-toggler active" : "nav-item dropdown-toggler"}>
                             <span className="nav-link dropdown-toggle" id="navbarDropdown" type="button" data-toggle="collapse" data-target="#dropmenu" aria-haspopup="true" aria-expanded="false">
                                 WORK

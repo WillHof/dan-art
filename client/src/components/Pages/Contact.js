@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
-import painting from "../../assets/LargeAbstractions/DH1;50x58.jpeg"
 import EmailForm from "../EmailForm"
 import SlideShow from "../SlideShow"
 export class Contact extends Component {
@@ -11,7 +10,7 @@ export class Contact extends Component {
         return (
             <div>
                 <div className="container-fluid">
-                    <div className="row">
+                    <div className="row mb-5">
                         <div className="col-md-4 d-none d-md-block">
                             <Vnav />
                         </div>
@@ -24,7 +23,7 @@ export class Contact extends Component {
                                 {/* <img src={painting} alt="Painting" id="aboutImage" /> */}
                             </div>
                             <div className="row">
-                                <div className="col-12 mt-3 mb-3 baskerville">
+                                <div className="col-12 mt-1 mb-3 baskerville aboutText">
                                     Those wishing to inquire about prices or to purchase pieces should use the form below for a prompt response.
                                 </div>
                             </div>

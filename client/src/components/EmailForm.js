@@ -30,7 +30,7 @@ export class EmailForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.onClick}>
+                <form onSubmit={this.onClick} className="baskerville">
                     <div className="form-row">
                         <div className="form-group mb-2 col-6">
                             <input type="text" className="form-control" id="fn" value={this.state.fn} placeholder="FIRST NAME" onChange={this.handleChange} />
@@ -40,10 +40,10 @@ export class EmailForm extends Component {
                         </div>
                     </div>
                     <div className="form-group mb-2">
-                        <input type="email" className="form-control" id="email" value={this.state.email} placeholder="email@example.com" onChange={this.handleChange}></input>
+                        <input type="email" className="form-control" id="email" value={this.state.email} placeholder="EMAIL@EXAMPLE.COM" onChange={this.handleChange}></input>
                     </div>
                     <div className="form-group">
-                        <textarea className="form-control" id="message" rows="3" value={this.state.message} placeholder="Your message here" onChange={this.handleChange}></textarea>
+                        <textarea className="form-control" id="message" rows="3" value={this.state.message} placeholder="YOUR MESSAGE HERE" onChange={this.handleChange}></textarea>
                     </div>
                     <button type="submit" id="sendEmailBtn" className="btn btn-primary mb-4">Send Message</button>
                 </form>

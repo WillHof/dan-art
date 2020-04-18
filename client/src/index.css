@@ -56,6 +56,9 @@ button,
   height:auto;
   max-height:522px
 }
+.aboutText{
+  line-height: 1.9;
+}
 #leftArrow{
   position:absolute;
   top:50%;
@@ -208,16 +211,17 @@ button,
   }
   .paintingImage{
     max-height: 80vh;
+    min-height:150px
   }
   #aboutImage{
     max-height:60vh
   }
 }
-/* @media screen and (min-width:1580px){
+@media screen and (min-width:1580px){
   #infoWrapper{
     max-width: 700px;
   }
-} */
+}
 
 .baskerville{
   font-family: 'Libre Baskerville', serif;

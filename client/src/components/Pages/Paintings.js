@@ -12,9 +12,9 @@ export class Paintings extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            images: "",
-            names: "",
-            dims: "",
+            images: [],
+            names: [],
+            dims: [],
             propSource: [],
         }
         this.modalData = this.modalData.bind(this)
@@ -39,7 +39,6 @@ export class Paintings extends Component {
     modalData(e) {
         let source = e.target.src
         let altText = e.target.alt
-        console.log(source)
         this.setState({ propSource: [source, altText] })
 
     }
@@ -63,18 +62,19 @@ export class Paintings extends Component {
         if (category === "RecentWork") {
             imagePaths = RecentWork
         }
-
-        let namePath = /(\w|(\w+\s)*)+;/;
-        let dimPath = /[\d.*x\d]+\./;
+        // /[a+\/.*+;] /;
+        // /;[\d.*x\d]+\./;
+        let namePath = /a\/[^;]*/;
+        let dimPath = /;[^;]*/;
         let pArr = [];
         let dArr = [];
         if (imagePaths.length) {
             for (let index = 0; index < imagePaths.length; index++) {
                 const element = imagePaths[index];
-                let pName = element.match(namePath);
-                let pDims = element.match(dimPath);
-                pArr.push(pName[0].substring(0, (pName[0].length - 1)));
-                dArr.push(pDims[0].substring(0, (pDims[0].length - 1)));
+                let pName = element.match(namePath)[0].substring(2).replace(/\^/g, "#");
+                let pDims = element.match(dimPath)[0].substring(1).replace(/-/g, " ").replace(/_/g, "/");
+                pArr.push(pName);
+                dArr.push(pDims);
             }
             this.setState({ images: imagePaths, names: pArr, dims: dArr })
         }
@@ -91,7 +91,7 @@ export class Paintings extends Component {
                             <Nav />
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row mb-5">
                         <div className="d-none d-md-block col-md-4 col-lg-3 col-xl-3">
                             <Vnav />
                         </div>
@@ -100,10 +100,13 @@ export class Paintings extends Component {
                             {this.state.images ? this.state.images.map((danPainting, index) => (
                                 <div key={index}>
                                     <div className="clearfix">
-                                        <img src={danPainting} alt={danPainting.id} key={danPainting} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
+                                        <img src={danPainting} alt={this.state.names[index]} key={danPainting} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
                                     </div>
                                     <div className="row">
-                                        <div className="col-12 text-right mb-4 h6 tgray pDesc" key={index}>{this.state.names[index]} {this.state.dims[index]}</div>
+                                        <div className="col-12 text-right mb-0 h6 tgray pDesc" key={index}>{this.state.names[index]}</div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-12 text-right mb-4 h6 tgray pDesc" key={index}>{this.state.dims[index]}</div>
                                     </div>
                                 </div>
                             )) :
@@ -119,7 +122,7 @@ export class Paintings extends Component {
                     <div className="modal-dialog" role="document">
                         <div className="modal-content" data-dismiss="modal" aria-label="Close">
                             <div className="modal-body d-flex justify-content-center">
-                                <img src={this.state.propSource[0]} className="modalImage"></img>
+                                <img src={this.state.propSource[0]} alt={this.state.propSource[1]} className="modalImage"></img>
                             </div>
                         </div>
                     </div>
