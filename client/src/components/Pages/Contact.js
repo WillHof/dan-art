@@ -17,7 +17,7 @@ export class Contact extends Component {
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-6 col-sm-12  blockContainer mr-auto ml-auto">
+                        <div className="col-md-7 col-sm-12  blockContainer mr-auto ml-auto">
                             <div id="slideShow">
                                 <SlideShow />
                                 {/* <img src={painting} alt="Painting" id="aboutImage" /> */}
@@ -30,7 +30,7 @@ export class Contact extends Component {
 
                             <EmailForm />
                         </div>
-                        <div className="col-md-2 d-none d-sm-block"></div>
+                        <div className="col-md-1 d-none d-sm-block"></div>
                     </div>
                 </div>
             </div >

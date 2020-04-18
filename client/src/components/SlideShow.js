@@ -41,8 +41,6 @@ export class SlideShow extends Component {
         if (category === "RecentWork") {
             imagePaths = RecentWork
         }
-        // /[a+\/.*+;] /;
-        // /;[\d.*x\d]+\./;
         let namePath = /a\/[^;]*/;
         let dimPath = /;[^;]*/;
         let pArr = [];
@@ -78,23 +76,27 @@ export class SlideShow extends Component {
     }
     render() {
         return (
-            <div>
-                <div className="relative">
-                    <div className="arrowContainerL" value={-1} onClick={this.onClick}>
-                        <div id="leftArrow" value={-1}>
-                            <span className="carousel-control-prev-icon" value={-1}></span>
+            <div className="row">
+                <div className="col-12" >
+                    <div className="row relative">
+                        <div className="col-1 arrowContainerL" value={-1} onClick={this.onClick}>
+                            <div id="leftArrow" value={-1}>
+                                <span className="carousel-control-prev-icon" value={-1}></span>
+                            </div>
+                        </div>
+                        <div className="stuff col-10">
+                            <img src={this.state.images[this.state.index]} id="slideImage" alt={this.state.names[this.state.index]} />
+                        </div>
+                        <div className="arrowContainerR col-1" value={1} onClick={this.onClick}>
+                            <div id="rightArrow" value={1}>
+                                <span className="carousel-control-next-icon" value={1}></span>
+                            </div>
                         </div>
                     </div>
-                    <div className="arrowContainerR" value={1} onClick={this.onClick}>
-                        <div id="rightArrow" value={1}>
-                            <span className="carousel-control-next-icon" value={1}></span>
-                        </div>
-                    </div>
-                    <div className="stuff">
-                        <img src={this.state.images[this.state.index]} id="aboutImage" className="mr-auto ml-auto" alt={this.state.names[this.state.index]} />
-                        <div className="row">
-                            <div className="col-12 text-right mb-4 h6 tgray pDesc">{this.state.names[this.state.index]} {this.state.dims[this.state.index]}</div>
-                        </div>
+                    <div className="row">
+                        <div className="col-1"></div>
+                        <div className="col-10 text-right mb-4 h6 tgray pDesc">{this.state.names[this.state.index]} {this.state.dims[this.state.index]}</div>
+                        <div className="col-1"></div>
                     </div>
                 </div>
             </div>

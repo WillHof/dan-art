@@ -59,31 +59,38 @@ button,
 .aboutText{
   line-height: 1.9;
 }
+#slideImage{
+  max-width: 100%;
+  /* display: block; */
+  max-height: 100%;
+  margin:auto;
+}
 #leftArrow{
   position:absolute;
   top:50%;
-  right:50%
+  right:25%
 }
 .stuff{
   width:fit-content;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
+  display:grid;
+  height:320px;
 }
 #rightArrow{
   position:absolute;
   top:50%;
-  left:50%
+  left:25%
 }
 .arrowContainerR{
   height:100%;
-  width:90px;
-  right:0px;
+  right:4px;
   position:absolute
 }
 .arrowContainerL{
   height:100%;
-  width:90px;
-  left:0px;
+  left:4px;
   position:absolute;
 }
 .relative{
@@ -199,11 +206,15 @@ button,
   .navbar-brand{
     white-space: normal;
   }
+  .stuff{
+    height:480px
+  }
 }
 @media screen and (min-width:992px){
   .blockContainer{
     margin-left: 0;
-  }
+  };
+  
 }
 @media screen and (min-width:1200px){
   .blockContainer{
