@@ -4,8 +4,7 @@ import EarlyWork from "../assets/EarlyWork/index";
 import RecentWork from "../assets/RecentWork/index";
 import SmallAbstractions from "../assets/SmallAbstractions/index";
 import LargeAbstractions from "../assets/LargeAbstractions/index";
-import MonotypesDrawings from "../assets/MonotypesDrawings/index";
-import InstallationViews from "../assets/InstallationViews/index";
+
 
 export class SlideShow extends Component {
     constructor(props) {
