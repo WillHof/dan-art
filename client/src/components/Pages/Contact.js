@@ -3,6 +3,7 @@ import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
 import EmailForm from "../EmailForm"
 import SlideShow from "../SlideShow"
+import PaintingDropdown from '../PaintingDropdown'
 export class Contact extends Component {
 
 
@@ -18,6 +19,11 @@ export class Contact extends Component {
                             <Nav />
                         </div>
                         <div className="col-md-7 col-sm-12 blockContainer mr-auto ml-auto">
+                            <div className="row">
+                                <div className="col-12">
+                                    <PaintingDropdown />
+                                </div>
+                            </div>
                             <div id="slideShow">
                                 <SlideShow />
                             </div>
