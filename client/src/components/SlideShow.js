@@ -14,13 +14,18 @@ export class SlideShow extends Component {
             images: "",
             names: "",
             dims: "",
+            category: "",
             index: 0
         }
         this.onClick = this.onClick.bind(this)
     }
     componentDidMount() {
-        let src = this.state.images[this.state.index]
-        src ? this.getPaintings("SmallAbstractions") : this.getPaintings("SmallAbstractions")
+        this.getPaintings(this.props.category)
+    }
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.category !== this.props.category) {
+            this.getPaintings(this.props.category)
+        }
     }
     getPaintings = (category) => {
         let imagePaths = []
@@ -33,12 +38,12 @@ export class SlideShow extends Component {
         if (category === "SmallAbstractions") {
             imagePaths = SmallAbstractions
         };
-        if (category === "MonotypesDrawings") {
-            imagePaths = MonotypesDrawings
-        };
-        if (category === "InstallationViews") {
-            imagePaths = InstallationViews
-        };
+        // if (category === "Drawings") {
+        //     imagePaths = MonotypesDrawings
+        // };
+        // if (category === "InstallationViews") {
+        //     imagePaths = InstallationViews
+        // };
         if (category === "RecentWork") {
             imagePaths = RecentWork
         }
@@ -54,7 +59,7 @@ export class SlideShow extends Component {
                 pArr.push(pName);
                 dArr.push(pDims);
             }
-            this.setState({ images: imagePaths, names: pArr, dims: dArr })
+            this.setState({ images: imagePaths, names: pArr, dims: dArr, index: 0 })
         }
         else {
             this.setState({ images: "", names: "", dims: "" })
@@ -63,8 +68,6 @@ export class SlideShow extends Component {
     onClick(e) {
         e.preventDefault()
         let x = this.state.index + Number(e.target.getAttribute('value'))
-        console.log(x < 0)
-
         if (x < 0) {
             this.setState({ index: this.state.images.length - 1 })
         }

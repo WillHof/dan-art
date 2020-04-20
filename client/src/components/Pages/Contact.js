@@ -5,7 +5,24 @@ import EmailForm from "../EmailForm"
 import SlideShow from "../SlideShow"
 import PaintingDropdown from '../PaintingDropdown'
 export class Contact extends Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentCategory: "SmallAbstractions",
+            allCategories:
+                [
+                    "LargeAbstractions",
+                    "SmallAbstractions",
+                    "RecentWork",
+                    "EarlyWork",
+                ],
+        }
+    }
+    handleClick(e) {
+        this.setState({
+            currentCategory: e.target.getAttribute("value")
+        })
+    }
 
     render() {
         return (
@@ -21,11 +38,11 @@ export class Contact extends Component {
                         <div className="col-md-7 col-sm-12 blockContainer mr-auto ml-auto">
                             <div className="row">
                                 <div className="col-12">
-                                    <PaintingDropdown />
+                                    <PaintingDropdown onClick={(e) => this.handleClick(e)} category={this.state.currentCategory} allCategories={this.state.allCategories} />
                                 </div>
                             </div>
                             <div id="slideShow">
-                                <SlideShow />
+                                <SlideShow category={this.state.currentCategory} />
                             </div>
                             <div className="row">
                                 <div className="col-12 mt-1 mb-3 baskerville lineH">
