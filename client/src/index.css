@@ -15,13 +15,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.baskerville{
+  font-family: 'Libre Baskerville', serif;
+}
+.garamond{
+  font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
+  color:rgba(0,0,0,.5)
+}
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none;
 }
-
 .noDec{
   text-decoration: none;
 }
@@ -40,6 +46,7 @@ button,
 .indent{
   text-indent:50px
 }
+
 #VNav{
   height:100vh;
   display:block
@@ -52,12 +59,17 @@ button,
 }
 #aboutImage{
   max-width: 100%;
-  /* display: block; */
+  display: inline-block;
   height:auto;
-  max-height:522px
+  max-height:522px; 
+}
+.lineH{
+line-height: 1.9;
 }
 .aboutText{
   line-height: 1.9;
+  width:100%;
+  max-width: 690px;
 }
 #danSlideImage{
   max-width: 100%;
@@ -76,7 +88,7 @@ button,
   justify-content: center;
   display:grid;
   grid-template-columns: 100%;
-  height:320px;
+  height:40vh;
   padding-left: 0;
   padding-right:0
 }
@@ -97,7 +109,6 @@ button,
 }
 .relative{
   position:relative;
-  width:100%
 }
 .carousel-control-prev-icon{
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23b6b6b6' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -208,10 +219,12 @@ button,
   .navbar-brand{
     white-space: normal;
   }
-  .stuff{
-    height:480px
-  }
 }
+/* @media screen and (orientation:portrait) and (min-height:500px){
+  .stuff{
+    height:400px
+  }
+} */
 @media screen and (min-width:992px){
   .blockContainer{
     margin-left: 0;
@@ -226,20 +239,12 @@ button,
     max-height: 80vh;
     min-height:150px
   }
-  #aboutImage{
+  /* #aboutImage{
     max-height:60vh
-  }
+  } */
 }
 @media screen and (min-width:1580px){
   #infoWrapper{
     max-width: 700px;
   }
-}
-
-.baskerville{
-  font-family: 'Libre Baskerville', serif;
-}
-.garamond{
-  font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
-  color:rgba(0,0,0,.5)
 }

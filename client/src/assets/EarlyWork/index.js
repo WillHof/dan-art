@@ -11,12 +11,12 @@ export const EarlyWork = [
     require('./DH Pink Bandeau;12x16;.jpeg'),
     require('./DH Self Portrait 1985;12x16;.jpeg'),
     require('./DH Young Man of the Seventies;15x23;.jpeg'),
-    require('./DH Naples fr the Corso V. Emmanuele;15.5x8.5;.jpeg'),
-    require('./DH Naples;14x8.5;.jpeg'),
+    require('./DH Naples from the Corso V. Emmanuele ^1;15.5x8.5;.jpeg'),
+    require('./DH Naples from the Corso V. Emmanuele ^2;14x8.5;.jpeg'),
     require('./DH Boulder;16x20;.jpg'),
-    require('./DH Bread Street Philly;10x14;.jpeg'),
     require('./DH Large Boulder;44x60;.jpg'),
-    require('./DH Block in Philly;8x8;.jpeg'),
+    require('./DH Bread Street, Philadelphia;10x14;.jpeg'),
+    require('./DH Block, Philadelphia;8x8;.jpeg'),
 
 
 ]
