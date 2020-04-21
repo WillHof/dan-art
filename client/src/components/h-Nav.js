@@ -21,13 +21,7 @@ export class Nav extends Component {
                                 <span className="nav-link dropdown-toggle" id="navbarDropdown" type="button" data-toggle="collapse" data-target="#dropmenuHorizontal" aria-haspopup="true" aria-expanded="false">
                                     WORK
                             </span>
-<<<<<<< HEAD
-                                <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenuHorizontal">
-                                    <Link to="/Paintings?category=RecentWork" className={window.location.search === "?category=RecentWork" ? "dropdown-item" : "dropdown-item tgray4"}>Recent Work</Link>
-                                    <Link to="/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item" : "dropdown-item tgray4"}>Small Abstractions</Link>
-=======
                                 <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
->>>>>>> 7c7e7727cd6343652bc8026db0425c410cfb96bb
                                     <Link to="/Paintings?category=LargeAbstractions" className={window.location.search === "?category=LargeAbstractions" ? "dropdown-item" : "dropdown-item tgray4"} >Large Abstractions</Link>
                                     <Link to="/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item" : "dropdown-item tgray4"}>Small Abstractions</Link>
                                     <Link to="/Paintings?category=RecentWork" className={window.location.search === "?category=RecentWork" ? "dropdown-item" : "dropdown-item tgray4"}>Recent Work</Link>
