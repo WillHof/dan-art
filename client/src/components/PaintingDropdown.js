@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 export class PaintingDropdown extends Component {
 
-    fixName = (input) => {
-        const exp = /(?<=[a-z])[A-Z]/
-        let nStr = input.replace(exp, " " + input.match(exp))
-        return nStr
-    }
+    // fixName = (input) => {
+    //     const exp = /(?<=[a-z])[A-Z]/
+    //     let nStr = input.replace(exp, " " + input.match(exp))
+    //     return nStr
+    // }
 
     render() {
         return (
