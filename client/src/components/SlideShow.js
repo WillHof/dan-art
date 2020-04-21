@@ -4,8 +4,7 @@ import EarlyWork from "../assets/EarlyWork/index";
 import RecentWork from "../assets/RecentWork/index";
 import SmallAbstractions from "../assets/SmallAbstractions/index";
 import LargeAbstractions from "../assets/LargeAbstractions/index";
-import MonotypesDrawings from "../assets/MonotypesDrawings/index";
-import InstallationViews from "../assets/InstallationViews/index";
+
 
 export class SlideShow extends Component {
     constructor(props) {
@@ -14,13 +13,18 @@ export class SlideShow extends Component {
             images: "",
             names: "",
             dims: "",
+            category: "",
             index: 0
         }
         this.onClick = this.onClick.bind(this)
     }
     componentDidMount() {
-        let src = this.state.images[this.state.index]
-        src ? this.getPaintings("SmallAbstractions") : this.getPaintings("SmallAbstractions")
+        this.getPaintings(this.props.category)
+    }
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.category !== this.props.category) {
+            this.getPaintings(this.props.category)
+        }
     }
     getPaintings = (category) => {
         let imagePaths = []
@@ -33,12 +37,12 @@ export class SlideShow extends Component {
         if (category === "SmallAbstractions") {
             imagePaths = SmallAbstractions
         };
-        if (category === "MonotypesDrawings") {
-            imagePaths = MonotypesDrawings
-        };
-        if (category === "InstallationViews") {
-            imagePaths = InstallationViews
-        };
+        // if (category === "Drawings") {
+        //     imagePaths = MonotypesDrawings
+        // };
+        // if (category === "InstallationViews") {
+        //     imagePaths = InstallationViews
+        // };
         if (category === "RecentWork") {
             imagePaths = RecentWork
         }
@@ -54,7 +58,7 @@ export class SlideShow extends Component {
                 pArr.push(pName);
                 dArr.push(pDims);
             }
-            this.setState({ images: imagePaths, names: pArr, dims: dArr })
+            this.setState({ images: imagePaths, names: pArr, dims: dArr, index: 0 })
         }
         else {
             this.setState({ images: "", names: "", dims: "" })
@@ -63,8 +67,6 @@ export class SlideShow extends Component {
     onClick(e) {
         e.preventDefault()
         let x = this.state.index + Number(e.target.getAttribute('value'))
-        console.log(x < 0)
-
         if (x < 0) {
             this.setState({ index: this.state.images.length - 1 })
         }
@@ -86,7 +88,7 @@ export class SlideShow extends Component {
                             </div>
                         </div>
                         <div className="stuff col-10">
-                            <img src={this.state.images[this.state.index]} id="danSlideImage" alt={this.state.names[this.state.index]} />
+                            <img src={this.state.images[this.state.index]} id="danSlideImage" alt={"Dan Hofstadter" + this.state.names[this.state.index]} />
                         </div>
                         <div className="arrowContainerR col-1" value={1} onClick={this.onClick}>
                             <div id="rightArrow" value={1}>

@@ -30,7 +30,7 @@ export class EmailForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.onClick} className="baskerville">
+                <form onSubmit={this.onClick} className="quicksand">
                     <div className="form-row">
                         <div className="form-group mb-2 col-6">
                             <input type="text" className="form-control" id="fn" value={this.state.fn} placeholder="FIRST NAME" onChange={this.handleChange} />
