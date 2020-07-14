@@ -45,7 +45,7 @@ export class EmailForm extends Component {
                     <div className="form-group">
                         <textarea className="form-control" id="message" rows="3" value={this.state.message} placeholder="YOUR MESSAGE HERE" onChange={this.handleChange}></textarea>
                     </div>
-                    <button type="submit" id="sendEmailBtn" className="btn btn-primary mb-4">Send Message</button>
+                    <button type="submit" id="sendEmailBtn" className="btn submitButton mb-4">Send Message</button>
                 </form>
             </div>
         )
