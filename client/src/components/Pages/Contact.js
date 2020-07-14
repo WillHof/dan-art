@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
 import EmailForm from "../EmailForm"
-import SlideShow from "../SlideShow"
-import PaintingDropdown from '../PaintingDropdown'
+import Logo from "../Logo"
+// import SlideShow from "../SlideShow"
+// import PaintingDropdown from '../PaintingDropdown'
 export class Contact extends Component {
     constructor(props) {
         super(props);
@@ -29,13 +30,20 @@ export class Contact extends Component {
             <div>
                 <div className="container-fluid">
                     <div className="row mb-5">
+
+                        <div className="col-12 d-none d-md-block">
+                            <div className="pl-3">
+                                <Logo />
+                            </div>
+                        </div>
+
                         <div className="col-md-4 d-none d-md-block">
                             <Vnav />
                         </div>
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-7 col-sm-12 blockContainer mr-auto ml-auto">
+                        <div className="col-md-7 col-sm-12 blockContainer mr-auto ml-auto pt-3">
                             {/* <div className="row">
                                 <div className="col-12">
                                     <PaintingDropdown onClick={(e) => this.handleClick(e)} category={this.state.currentCategory} allCategories={this.state.allCategories} />
@@ -45,7 +53,7 @@ export class Contact extends Component {
                                 <SlideShow category={this.state.currentCategory} />
                             </div> */}
                             <div className="row">
-                                <div className="col-12 mt-1 mb-3 baskerville lineH">
+                                <div className="col-12  mb-3 baskerville lineH">
                                     Those wishing to inquire about prices or to purchase pieces should use the form below.
                                 </div>
                             </div>

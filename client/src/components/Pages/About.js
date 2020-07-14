@@ -2,12 +2,20 @@ import React, { Component } from 'react'
 import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
 import painting from "../../assets/About/DH_studio_b.jpg"
+import Logo from "../Logo"
 export class About extends Component {
     render() {
         return (
             <div>
                 <div className="container-fluid">
                     <div className="row mb-5">
+
+                        <div className="col-12 d-none d-md-block">
+                            <div className="pl-3">
+                                <Logo />
+                            </div>
+                        </div>
+
                         <div className="col-md-3 d-none d-md-block">
                             <Vnav />
                         </div>

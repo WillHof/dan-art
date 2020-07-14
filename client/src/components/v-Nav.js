@@ -5,10 +5,10 @@ export class Vnav extends Component {
         return (
             <div>
                 <nav className="navbar navbar-light bg-white quicksand" id="VNav">
-                    <a className="navbar-brand" id="nBrand" href="/">
+                    {/* <a className="navbar-brand" id="nBrand" href="/">
                         <div className="quicksand">DAN HOFSTADTER</div>
                         <div className="baskerville" id="danSub"><i>p a i n t i n g s</i></div>
-                    </a>
+                    </a> */}
 
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="">
                         <li className={window.location.pathname === "/Paintings" ? "nav-item dropdown-toggler active" : "nav-item dropdown-toggler"}>

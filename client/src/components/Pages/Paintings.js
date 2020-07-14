@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Nav from "../h-Nav";
 import Vnav from "../v-Nav";
+import Logo from "../Logo"
 import EarlyWork from "../../assets/EarlyWork/index";
 import RecentWork from "../../assets/RecentWork/index";
 import SmallAbstractions from "../../assets/SmallAbstractions/index";
@@ -87,6 +88,14 @@ export class Paintings extends Component {
         return (
             <div>
                 <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-12 d-none d-md-block">
+                            <div className="pl-3">
+                                <Logo />
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="row d-block d-md-none">
                         <div className="col-sm-12">
                             <Nav />
