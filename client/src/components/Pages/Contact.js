@@ -7,16 +7,16 @@ import PaintingDropdown from '../PaintingDropdown'
 export class Contact extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            currentCategory: "SmallAbstractions",
-            allCategories:
-                [
-                    "LargeAbstractions",
-                    "SmallAbstractions",
-                    "RecentWork",
-                    "EarlyWork",
-                ],
-        }
+        // this.state = {
+        //     currentCategory: "SmallAbstractions",
+        //     allCategories:
+        //         [
+        //             "LargeAbstractions",
+        //             "SmallAbstractions",
+        //             "RecentWork",
+        //             "EarlyWork",
+        //         ],
+        // }
     }
     handleClick(e) {
         this.setState({
@@ -36,14 +36,14 @@ export class Contact extends Component {
                             <Nav />
                         </div>
                         <div className="col-md-7 col-sm-12 blockContainer mr-auto ml-auto">
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-12">
                                     <PaintingDropdown onClick={(e) => this.handleClick(e)} category={this.state.currentCategory} allCategories={this.state.allCategories} />
                                 </div>
                             </div>
                             <div id="slideShow">
                                 <SlideShow category={this.state.currentCategory} />
-                            </div>
+                            </div> */}
                             <div className="row">
                                 <div className="col-12 mt-1 mb-3 baskerville lineH">
                                     Those wishing to inquire about prices or to purchase pieces should use the form below.
