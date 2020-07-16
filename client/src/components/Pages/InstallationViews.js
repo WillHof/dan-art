@@ -37,15 +37,41 @@ export class InstallationViews extends Component {
                         <div className="d-none d-md-block col-md-4 col-lg-3 col-xl-3">
                             <Vnav />
                         </div>
-                        {this.state.images ? this.state.images.map(
-                            (currImage) => (
+                        <div className="col-sm-12 col-md-8 col-xl-7 pt-4 blockContainer mr-auto ml-auto">
+
+                            {this.state.images[0] ?
                                 <div>
-                                    <img src={currImage}></img>
+
+                                    <div className="d-flex flex-wrap ">
+                                        <div className="flex-column" style={{ flex: "50%" }}>
+                                            <img src={this.state.images[0]} className="paintingImage"></img>
+                                            <div className="flex-row">
+                                                <div className="flex-column" style={{ flex: "50%" }}>
+                                                    <img src={this.state.images[3]} className="paintingImage"></img>
+                                                </div>
+                                                <div className="flex-column" style={{ flex: "50%" }}>
+                                                    <img src={this.state.images[2]} className="paintingImage"></img>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div className="flex-column" style={{ flex: "50%" }}>
+                                            <img src={this.state.images[1]} className="paintingImage"></img>
+                                        </div>
+
+
+                                    </div>
+
+
+
                                 </div>
-                            )
-                        ) :
-                            <div>not found</div>
-                        }
+                                :
+                                <div>not found</div>
+                            }
+
+                        </div>
                     </div>
                 </div>
             </div>
