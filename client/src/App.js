@@ -5,6 +5,7 @@ import Home from "./components/Pages/Home"
 import Paintings from './components/Pages/Paintings'
 import About from "./components/Pages/About"
 import Contact from "./components/Pages/Contact"
+import InstallationViews from "./components/Pages/InstallationViews"
 // import Writing from "./components/Pages/Writing"
 class App extends Component {
 
@@ -16,7 +17,7 @@ class App extends Component {
           <Route exact path="/Paintings" component={Paintings} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Contact" component={Contact} />
-          {/* <Route exact path="/Writing" component={Writing} /> */}
+          <Route exact path="/InstallationViews" component={InstallationViews} />
         </Switch>
       </Router>
     );
