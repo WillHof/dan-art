@@ -31,7 +31,7 @@ export class Contact extends Component {
                 <div className="container-fluid">
                     <div className="row mb-5">
 
-                        <div className="col-12 d-none d-md-block">
+                        <div className="col-12 mt-4 d-none d-md-block">
                             <div className="pl-3">
                                 <Logo />
                             </div>
@@ -43,7 +43,7 @@ export class Contact extends Component {
                         <div className="d-block d-md-none col-sm-12">
                             <Nav />
                         </div>
-                        <div className="col-md-7 col-sm-12 blockContainer mr-auto ml-auto pt-3">
+                        <div className="col-md-7 col-sm-12 blockContainer mr-auto ml-auto pt-4">
                             {/* <div className="row">
                                 <div className="col-12">
                                     <PaintingDropdown onClick={(e) => this.handleClick(e)} category={this.state.currentCategory} allCategories={this.state.allCategories} />

@@ -89,7 +89,7 @@ export class Paintings extends Component {
             <div>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-12 d-none d-md-block">
+                        <div className="col-12 mt-4 d-none d-md-block">
                             <div className="pl-3">
                                 <Logo />
                             </div>
@@ -106,7 +106,7 @@ export class Paintings extends Component {
                             <Vnav />
                         </div>
 
-                        <div className="col-sm-12 col-md-8 col-xl-7 blockContainer mr-auto ml-auto">
+                        <div className="col-sm-12 col-md-8 col-xl-7 pt-4 blockContainer mr-auto ml-auto">
                             {this.state.images ? this.state.images.map((danPainting, index) => (
                                 <div key={index}>
                                     <div className="clearfix">
