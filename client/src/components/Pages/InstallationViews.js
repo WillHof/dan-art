@@ -5,12 +5,10 @@ import Vnav from "../v-Nav"
 import Nav from "../h-Nav"
 
 export class InstallationViews extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            images: []
-        };
-    }
+    state = {
+        images: []
+    };
+
     componentDidMount() {
         this.setState({ images: InstallationImages })
     }
@@ -44,13 +42,13 @@ export class InstallationViews extends Component {
 
                                     <div className="d-flex flex-wrap ">
                                         <div className="flex-column p-2" style={{ flex: "50%" }}>
-                                            <img src={this.state.images[0]} className="paintingImage p-2"></img>
+                                            <img src={this.state.images[0]} className="paintingImage p-2" alt="gallery1"></img>
                                             <div className="d-flex">
                                                 <div className="flex-column p-2" style={{ flex: "50%" }}>
-                                                    <img src={this.state.images[3]} className="paintingImage"></img>
+                                                    <img src={this.state.images[3]} className="paintingImage" alt="gallery4"></img>
                                                 </div>
                                                 <div className="flex-column p-2" style={{ flex: "50%" }}>
-                                                    <img src={this.state.images[2]} className="paintingImage"></img>
+                                                    <img src={this.state.images[2]} className="paintingImage" alt="gallery3"></img>
                                                 </div>
                                             </div>
 
@@ -58,7 +56,7 @@ export class InstallationViews extends Component {
 
                                         </div>
                                         <div className="flex-column" style={{ flex: "50%" }}>
-                                            <img src={this.state.images[1]} className="paintingImage pt-3 pr-3 pb-3"></img>
+                                            <img src={this.state.images[1]} className="paintingImage pt-3 pr-3 pb-3" alt="gallery2"></img>
                                         </div>
 
 
