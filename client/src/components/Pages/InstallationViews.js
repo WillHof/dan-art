@@ -43,13 +43,13 @@ export class InstallationViews extends Component {
                                 <div>
 
                                     <div className="d-flex flex-wrap ">
-                                        <div className="flex-column" style={{ flex: "50%" }}>
-                                            <img src={this.state.images[0]} className="paintingImage"></img>
-                                            <div className="flex-row">
-                                                <div className="flex-column" style={{ flex: "50%" }}>
+                                        <div className="flex-column p-2" style={{ flex: "50%" }}>
+                                            <img src={this.state.images[0]} className="paintingImage p-2"></img>
+                                            <div className="d-flex">
+                                                <div className="flex-column p-2" style={{ flex: "50%" }}>
                                                     <img src={this.state.images[3]} className="paintingImage"></img>
                                                 </div>
-                                                <div className="flex-column" style={{ flex: "50%" }}>
+                                                <div className="flex-column p-2" style={{ flex: "50%" }}>
                                                     <img src={this.state.images[2]} className="paintingImage"></img>
                                                 </div>
                                             </div>
@@ -58,7 +58,7 @@ export class InstallationViews extends Component {
 
                                         </div>
                                         <div className="flex-column" style={{ flex: "50%" }}>
-                                            <img src={this.state.images[1]} className="paintingImage"></img>
+                                            <img src={this.state.images[1]} className="paintingImage pt-3 pr-3 pb-3"></img>
                                         </div>
 
 
