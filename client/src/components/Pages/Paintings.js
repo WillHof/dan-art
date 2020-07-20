@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import Nav from "../h-Nav";
-import Vnav from "../v-Nav";
-import Logo from "../Logo"
 import EarlyWork from "../../assets/EarlyWork/index";
 import RecentWork from "../../assets/RecentWork/index";
 import SmallAbstractions from "../../assets/SmallAbstractions/index";
@@ -86,8 +83,8 @@ export class Paintings extends Component {
     }
     render() {
         return (
-            <div>
-                <div className="container-fluid">
+            <div className="col-sm-12 col-md-8 col-xl-7 pt-4 blockContainer mr-auto ">
+                {/* <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 mt-4 d-none d-md-block">
                             <div className="pl-3">
@@ -104,29 +101,29 @@ export class Paintings extends Component {
                     <div className="row mb-5">
                         <div className="d-none d-md-block col-md-4 col-lg-3 col-xl-3">
                             <Vnav />
-                        </div>
+                        </div> */}
 
-                        <div className="col-sm-12 col-md-8 col-xl-7 pt-4 blockContainer mr-auto ml-auto">
-                            {this.state.images ? this.state.images.map((danPainting, index) => (
-                                <div key={index}>
-                                    <div className="clearfix">
-                                        <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} key={danPainting} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-12 text-right mb-0 h6 tgray pDesc" key={index}>{this.state.names[index]}</div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-12 text-right mb-4 h6 tgray pDesc" key={index}>{this.state.dims[index]}</div>
-                                    </div>
-                                </div>
-                            )) :
-                                <div className="col-md-6 col-sm-11 blockContainer mr-auto ml-auto">
-                                    There are no paintings here yet.
-                            </div>}
+
+                {this.state.images ? this.state.images.map((danPainting, index) => (
+                    <div key={index}>
+                        <div className="clearfix">
+                            <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} key={danPainting} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
                         </div>
-                        <div className="d-none d-lg-block col-lg-1 col-xl-2"></div>
+                        <div className="row">
+                            <div className="col-12 text-right mb-0 h6 tgray pDesc" key={index}>{this.state.names[index]}</div>
+                        </div>
+                        <div className="row">
+                            <div className="col-12 text-right mb-4 h6 tgray pDesc" key={index}>{this.state.dims[index]}</div>
+                        </div>
                     </div>
-                </div>
+                )) :
+                    <div className="col-md-6 col-sm-11 blockContainer mr-auto ml-auto">
+                        There are no paintings here yet.
+                            </div>}
+
+                <div className="d-none d-lg-block col-lg-1 col-xl-2"></div>
+
+
 
                 <div className="modal fade" id="paintingModal" tabIndex="-1" role="dialog" aria-labelledby="paintingModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">

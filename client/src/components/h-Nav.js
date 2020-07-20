@@ -12,16 +12,12 @@ export class Nav extends Component {
                     </button>
                     <div className="collapse navbar-collapse quicksand" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                            {/* <li className={window.location.pathname === "" ? "nav-item active" : "nav-item"}>
-                                <Link to="/" className="nav-link">
-                                    Home
-                                </Link>
-                            </li> */}
+
                             <li className={window.location.pathname === "/Paintings" ? "nav-item dropdown-toggler active" : "nav-item dropdown-toggler"}>
                                 <span className="nav-link dropdown-toggle" id="navbarDropdown" type="button" data-toggle="collapse" data-target="#dropmenuHorizontal" aria-haspopup="true" aria-expanded="false">
                                     WORK
                             </span>
-                                <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenu">
+                                <div className="collapse" aria-labelledby="navbarDropdown" id="dropmenuHorizontal">
                                     <Link to="/Paintings?category=LargeAbstractions" className={window.location.search === "?category=LargeAbstractions" ? "dropdown-item" : "dropdown-item tgray4"} >Large Abstractions</Link>
                                     <Link to="/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item" : "dropdown-item tgray4"}>Small Abstractions</Link>
                                     <Link to="/Paintings?category=RecentWork" className={window.location.search === "?category=RecentWork" ? "dropdown-item" : "dropdown-item tgray4"}>Recent Work</Link>
@@ -35,11 +31,6 @@ export class Nav extends Component {
                                     ABOUT THE ARTIST
                                 </Link>
                             </li>
-                            {/* <li className={window.location.pathname === "/Writing" ? "nav-item active" : "nav-item"}>
-                                <Link to="/Writing" className="nav-link">
-                                    Writing
-                                </Link>
-                            </li> */}
                             <li className={window.location.pathname === "/Contact" ? "nav-item active" : "nav-item"}>
                                 <Link to="/Contact" className="nav-link">
                                     CONTACT

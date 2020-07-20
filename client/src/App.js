@@ -6,7 +6,7 @@ import Paintings from './components/Pages/Paintings'
 import About from "./components/Pages/About"
 import Contact from "./components/Pages/Contact"
 import InstallationViews from "./components/Pages/InstallationViews"
-// import Writing from "./components/Pages/Writing"
+import Main from "./components/Pages/Main"
 class App extends Component {
 
   render() {
@@ -14,12 +14,16 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Paintings" component={Paintings} />
-          <Route exact path="/About" component={About} />
-          <Route exact path="/Contact" component={Contact} />
-          <Route exact path="/InstallationViews" component={InstallationViews} />
+          <Main>
+            <Route exact path="/Main/Paintings" component={Paintings} />
+            <Route exact path="/Main/About" component={About} />
+            <Route exact path="/Main/Contact" component={Contact} />
+            <Route exact path="/Main/InstallationViews" component={InstallationViews} />
+          </Main>
+
         </Switch>
       </Router>
+
     );
   }
 }
