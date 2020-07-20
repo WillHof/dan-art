@@ -25,7 +25,7 @@ export class Main extends Component {
                         </div>
                     </div>
                     <div className="row mb-5">
-                        <div className="d-none d-md-block col-md-4 col-lg-3 col-xl-3">
+                        <div className="d-none d-md-block col-md-4 col-xl-3">
                             <Vnav />
                         </div>
 

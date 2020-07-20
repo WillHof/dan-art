@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Nav from "../h-Nav"
-import Vnav from "../v-Nav"
+
 import painting from "../../assets/About/DH_studio_b.jpg"
-import Logo from "../Logo"
+
 export class About extends Component {
     render() {
         return (
