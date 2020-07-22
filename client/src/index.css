@@ -69,6 +69,10 @@ button,
 .flex57{
   flex:57%
 }
+.flex100{
+  flex:100%
+}
+
 .lineH{
 line-height: 1.9;
 }
@@ -202,6 +206,7 @@ line-height: 1.9;
     max-width: 90vw;
     margin: 1.75rem auto;
 }
+ 
 }
 #danTitle{
   color:white;
@@ -216,9 +221,22 @@ line-height: 1.9;
     object-position: 50% 0%;
     object-fit: cover;
 }
+#gallery2{
+  padding-top: 1rem;
+}
 @media screen and (max-width:767px){
   .blockContainer{
     padding-top: 0.5rem;
+  }
+  .flex43{
+    flex:100%;
+    padding-left:1rem
+  }
+  .flex57{
+    flex:100%
+  }
+  #gallery2{
+    padding-top: 0;
   }
 }
 @media  screen and (max-width:810px) and (min-width:768px){

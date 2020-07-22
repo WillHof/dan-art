@@ -18,7 +18,7 @@ export class InstallationViews extends Component {
                 {this.state.images[0] ?
                     <div>
                         <div className="d-flex flex-wrap ">
-                            <div className="flex-column p-2" style={{ flex: "57%" }}>
+                            <div className="flex-column p-2 flex57">
                                 <img src={this.state.images[0]} className="paintingImage p-2" alt="gallery1"></img>
                                 <div className="d-flex">
                                     <div className="flex-column p-2 flex50" >
@@ -29,8 +29,8 @@ export class InstallationViews extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex-column" style={{ flex: "43%" }}>
-                                <img src={this.state.images[1]} className="paintingImage pt-3 pr-3 pb-3" alt="gallery2"></img>
+                            <div className="flex-column flex43">
+                                <img src={this.state.images[1]} id="gallery2" className="paintingImage pr-3 pb-3" alt="gallery2"></img>
                             </div>
                         </div>
                     </div>
