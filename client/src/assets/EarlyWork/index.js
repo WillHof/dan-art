@@ -10,10 +10,11 @@ export const EarlyWork = [
     require('./DH Model in Chefs Toque;12x16;.jpeg'),
     require('./DH Pink Bandeau;12x16;.jpeg'),
     require('./DH Self Portrait 1985;12x16;.jpeg'),
+    require('./DH Cousin Robin;12x18.jpeg'),
+    require('./DH Philly Printer;20x22.jpeg'),
     require('./DH Young Man of the Seventies;15x23;.jpeg'),
     require('./DH Naples from the Corso V. Emmanuele ^1;15.5x8.5;.jpeg'),
     require('./DH Naples from the Corso V. Emmanuele ^2;14x8.5;.jpeg'),
-
     require('./DH Bread Street, Philadelphia;10x14;.jpeg'),
     require('./DH Block, Philadelphia;8x8;.jpeg'),
     require('./DH Boulder;16x20;.jpg'),
