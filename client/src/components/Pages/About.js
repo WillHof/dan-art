@@ -5,10 +5,10 @@ import painting from "../../assets/About/DH_studio_b.jpg"
 export class About extends Component {
     render() {
         return (
-            <div className="col-md-8 col-sm-12 pt-4 blockContainer mr-auto" id="infoWrapper">
+            <div className="col-md-8 col-sm-12 pt-4 mr-auto ml-auto" id="infoWrapper">
 
                 <img src={painting} id="aboutImage" className="paintingImage" alt="Dan Hofstadter Studio" />
-                <div className="indent baskerville aboutText mt-3">
+                <div className="baskerville aboutText mt-3">
                     Painting for me is an expression of feeling, analogous to music. Though I seldom make collages, my pictures are derived from a collage approach. Each paint patch is mentally weighed for its color volume - its size, hue, value, and saturation - while being juxtaposed with others. I try not to fall into a settled way of doing things, but to attend to where the work itself wants to go.
                             </div>
                 <div className="indent baskerville aboutText">

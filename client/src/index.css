@@ -137,6 +137,7 @@ line-height: 1.9;
   height:auto;
   max-height:522px
 }
+  
 .blockContainer{
   text-align: left;
   /* padding-left: 3rem; */
@@ -228,6 +229,12 @@ line-height: 1.9;
   .blockContainer{
     padding-top: 0.5rem;
   }
+  
+  #gallery2{
+    padding-top: 0;
+  }
+}
+@media screen and (max-width:1023px){
   .flex43{
     flex:100%;
     padding-left:1rem
@@ -236,9 +243,10 @@ line-height: 1.9;
     flex:100%
   }
   #gallery2{
-    padding-top: 0;
+    padding-top: 0rem;
   }
 }
+
 @media  screen and (max-width:810px) and (min-width:768px){
  #nBrand{
   font-size:2rem
@@ -248,21 +256,47 @@ line-height: 1.9;
   .navbar-brand{
     white-space: normal;
   }
+  #infoWrapper{
+    transform:translateY(-5%)
+  }
+  #installFlex{
+    transform:translateY(-11px)
+  }
+  #aboutImage{
+    max-width: 60%;
+    float:right;
+  }
 }
 /* @media screen and (orientation:portrait) and (min-height:500px){
   .stuff{
     height:400px
   }
 } */
+@media screen and (min-width:923px){
+  #infoWrapper{
+    transform:translateY(-8%)
+  }
+}
 @media screen and (min-width:992px){
   .blockContainer{
     margin-left: 0;
   };
   
 }
+@media screen and (min-width:1024px){
+  #installFlex{
+    transform:translateY(-5%)
+  }
+  .gallery{
+    max-height: none;
+  }
+}
 @media screen and (min-width:1200px){
   .blockContainer{
     max-width: none;
+  }
+  .aboutText{
+    max-width:none; 
   }
   .paintingImage{
     max-height: 80vh;

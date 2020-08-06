@@ -60,22 +60,27 @@ export class Paintings extends Component {
         };
         if (category === "RecentWork") {
             imagePaths = RecentWork
-        }
-        // /[a+\/.*+;] /;
-        // /;[\d.*x\d]+\./;
+        };
+        //extracts filename before first semicolon from filepath
         let namePath = /a\/[^;]*/;
+        //extracts dimensions, after first semicolon and before next semicolon from filepath
         let dimPath = /;[^;]*/;
+        let filePath = "/static/media/"
         let pArr = [];
         let dArr = [];
+        let fArr = []
         if (imagePaths.length) {
+            //loops through images in the imagepath folder, pushes names and dimensions into an array
             for (let index = 0; index < imagePaths.length; index++) {
                 const element = imagePaths[index];
-                let pName = element.match(namePath)[0].substring(2).replace(/\^/g, "#");
+                let pName = element.match(namePath)[0].substring(2).replace(/\^/g, "#").replace(/\$/g, "'");
                 let pDims = element.match(dimPath)[0].substring(1).replace(/-/g, " ").replace(/_/g, "/");
+                let pFull = filePath + pName + ";" + pDims + ";Full"
                 pArr.push(pName);
                 dArr.push(pDims);
+                fArr.push(pFull);
             }
-            this.setState({ images: imagePaths, names: pArr, dims: dArr })
+            this.setState({ images: imagePaths, names: pArr, dims: dArr, fullImages: fArr })
         }
         else {
             this.setState({ images: "", names: "", dims: "" })
@@ -84,47 +89,27 @@ export class Paintings extends Component {
     render() {
         return (
             <div className="col-sm-12 col-md-8 col-xl-7 pt-4 blockContainer mr-auto ">
-                {/* <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-12 mt-4 d-none d-md-block">
-                            <div className="pl-3">
-                                <Logo />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row d-block d-md-none">
-                        <div className="col-sm-12">
-                            <Nav />
-                        </div>
-                    </div>
-                    <div className="row mb-5">
-                        <div className="d-none d-md-block col-md-4 col-lg-3 col-xl-3">
-                            <Vnav />
-                        </div> */}
-
-
                 {this.state.images ? this.state.images.map((danPainting, index) => (
                     <div key={index}>
                         <div className="clearfix">
                             <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} key={danPainting} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
                         </div>
                         <div className="row">
-                            <div className="col-12 text-right mb-0 h6 tgray pDesc" key={index}>{this.state.names[index]}</div>
+                            <div className="col-12 text-right mb-0 h6 tgray pDesc quicksand" key={index}>{this.state.names[index]}</div>
                         </div>
                         <div className="row">
-                            <div className="col-12 text-right mb-4 h6 tgray pDesc" key={index}>{this.state.dims[index]}</div>
+                            <div className="col-12 text-right mb-4 h6 tgray pDesc quicksand" key={index}>{this.state.dims[index]}</div>
                         </div>
                     </div>
                 )) :
                     <div className="col-md-6 col-sm-11 blockContainer mr-auto ml-auto">
                         There are no paintings here yet.
                             </div>}
-
+                {/* Placeholder for remaining column space */}
                 <div className="d-none d-lg-block col-lg-1 col-xl-2"></div>
 
 
-
+                {/* enlarged image when clicked */}
                 <div className="modal fade" id="paintingModal" tabIndex="-1" role="dialog" aria-labelledby="paintingModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content" data-dismiss="modal" aria-label="Close">
