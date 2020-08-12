@@ -4,7 +4,11 @@ import RecentWork from "../../assets/RecentWork/index";
 import SmallAbstractions from "../../assets/SmallAbstractions/index";
 import LargeAbstractions from "../../assets/LargeAbstractions/index";
 import MonotypesDrawings from "../../assets/MonotypesDrawings/index";
-import InstallationViews from "../../assets/InstallationViews/index";
+import EarlyWorkFull from "../../assets/EarlyWork/fullindex";
+import LargeAbstractionsFull from "../../assets/LargeAbstractions/indexfull"
+import SmallAbstractionsFull from "../../assets/SmallAbstractions/indexfull"
+import MonotypesDrawingsFull from "../../assets/MonotypesDrawings/indexfull"
+import RecentWorkFull from "../../assets/RecentWork/indexfull"
 
 export class Paintings extends Component {
     constructor(props) {
@@ -13,6 +17,7 @@ export class Paintings extends Component {
             images: [],
             names: [],
             dims: [],
+            fullImages: [],
             propSource: [],
         }
         this.modalData = this.modalData.bind(this)
@@ -36,36 +41,43 @@ export class Paintings extends Component {
         }
     }
     modalData(e) {
-        let source = e.target.src
+
+        let source = this.state.fullImages[e.target.getAttribute("thing")]
         let altText = e.target.alt
         this.setState({ propSource: [source, altText] })
 
     }
     getPaintings = (category) => {
         let imagePaths = []
+        let fullPaths = []
         if (category === "EarlyWork") {
             imagePaths = EarlyWork;
+            fullPaths = EarlyWorkFull;
         };
         if (category === "LargeAbstractions") {
-            imagePaths = LargeAbstractions
+            imagePaths = LargeAbstractions;
+            fullPaths = LargeAbstractionsFull;
         };
         if (category === "SmallAbstractions") {
             imagePaths = SmallAbstractions
+            fullPaths = SmallAbstractionsFull
         };
         if (category === "MonotypesDrawings") {
             imagePaths = MonotypesDrawings
+            fullPaths = MonotypesDrawingsFull
         };
-        if (category === "InstallationViews") {
-            imagePaths = InstallationViews
-        };
+        // if (category === "InstallationViews") {
+        //     imagePaths = InstallationViews
+        //     fullPaths = InstallationViewsFull
+        // };
         if (category === "RecentWork") {
             imagePaths = RecentWork
+            fullPaths = RecentWorkFull
         };
         //extracts filename before first semicolon from filepath
         let namePath = /a\/[^;]*/;
         //extracts dimensions, after first semicolon and before next semicolon from filepath
         let dimPath = /;[^;]*/;
-        let filePath = "/static/media/"
         let pArr = [];
         let dArr = [];
         let fArr = []
@@ -75,7 +87,7 @@ export class Paintings extends Component {
                 const element = imagePaths[index];
                 let pName = element.match(namePath)[0].substring(2).replace(/\^/g, "#").replace(/\$/g, "'");
                 let pDims = element.match(dimPath)[0].substring(1).replace(/-/g, " ").replace(/_/g, "/");
-                let pFull = filePath + pName + ";" + pDims + ";Full"
+                let pFull = fullPaths[index]
                 pArr.push(pName);
                 dArr.push(pDims);
                 fArr.push(pFull);
@@ -92,7 +104,7 @@ export class Paintings extends Component {
                 {this.state.images ? this.state.images.map((danPainting, index) => (
                     <div key={index}>
                         <div className="clearfix">
-                            <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} key={danPainting} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
+                            <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} thing={index} key={index} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
                         </div>
                         <div className="row">
                             <div className="col-12 text-right mb-0 h6 tgray pDesc quicksand" key={index}>{this.state.names[index]}</div>
