@@ -120,10 +120,13 @@ button,
   max-height:90vh;
   margin-left:auto;
   margin-right:auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .modal-content{
   background-color: rgba(0, 0, 0, 0);
-  border: none
+  border: none;
+  height:95vh
 }
 .modal-body{
   max-height:90vh
