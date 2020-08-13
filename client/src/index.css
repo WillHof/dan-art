@@ -249,6 +249,9 @@ button,
   .title-group{
     transform:translateY(-55%);
   }
+  #aboutImage{
+    padding-left: 1rem;
+  }
 }
 @media  screen and (max-width:810px) and (min-width:768px){
   #nBrand{
