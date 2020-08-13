@@ -4,9 +4,7 @@ import Nav from "../h-Nav"
 import Vnav from "../v-Nav"
 
 export class Main extends Component {
-    state = {
-        HEY: "MAIN IS HERE"
-    }
+
     render() {
         return (
             <div>
