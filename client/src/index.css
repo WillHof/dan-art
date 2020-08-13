@@ -306,11 +306,7 @@ button,
     max-height:60vh
   } */
 }
-@media screen and (min-width:1580px){
-  #infoWrapper{
-    max-width: 700px;
-  }
-}
+
 
 
 /* #leftArrow{
