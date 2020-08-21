@@ -6,10 +6,24 @@ module.exports = {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
+                type:'Oauth2',
                 user: 'thehorrorofkurtz@gmail.com',
-                pass: process.env.gPass
+                clientId:process.env.clientId,
+                clientSecret:process.env.clientSecret,
+                refreshToken:process.env.refreshToken,
+                accessToken:process.env.acccesToken,
+
             }
         });
+        transporter.set('oauth2_provision_cb',(user,renew,callback)=>{
+            let accessToken=userTokens[user];
+            if(!acccesToken){
+                return callback(new Error('Unknown User'));
+            }
+            else{
+                return callback(null,accessToken)
+            }
+        })
         const mailOptions = {
             from: 'danSite@noreply.com',
             to: 'whof@bu.edu',
