@@ -22,10 +22,22 @@ export class EmailForm extends Component {
 
         Axios.post('/api/sendMail', this.state)
             .then(
-                (res) => { console.log(res.json) },
-                (err) => { console.log(err.json) }
+                (res) => {
+
+                    alert('Thank you for your email! Dan will get in touch with you shortly.');
+                    this.setState({
+                        fn: "",
+                        ln: "",
+                        email: "",
+                        message: ""
+                    });
+                },
+                (err) => {
+                    console.log(err);
+                    alert('Something went wrong. Please contact dhworks5012@gmail.com')
+                }
             );
-        alert('Thank you for your email! Dan will get in touch with you shortly.');
+
     }
     render() {
         return (

@@ -41,11 +41,9 @@ export class Paintings extends Component {
         }
     }
     modalData(e) {
-
         let source = this.state.fullImages[e.target.getAttribute("thing")]
         let altText = e.target.alt
         this.setState({ propSource: [source, altText] })
-
     }
     getPaintings = (category) => {
         let imagePaths = []
