@@ -244,10 +244,10 @@ button,
     float:right;
   }
   #danSub{
-    font-size: 3.5rem;
+    font-size: 2.7rem;
   }
   #danTitle{
-    font-size: 4rem;
+    font-size: 3.0rem;
   }
   .title-group{
     transform:translateY(-55%);
@@ -296,6 +296,7 @@ button,
   .gallery{
     max-height: none;
   }
+ 
 }
 @media screen and (min-width:1200px){
   .blockContainer{
@@ -307,6 +308,12 @@ button,
   .paintingImage{
     max-height: 80vh;
     min-height:150px
+  }
+  #danSub{
+    font-size: 3.5rem;
+  }
+  #danTitle{
+    font-size: 4.5rem;
   }
   /* #aboutImage{
     max-height:60vh
