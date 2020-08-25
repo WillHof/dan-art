@@ -40,7 +40,7 @@ export class EmailForm extends Component {
                         </div>
                     </div>
                     <div className="form-group mb-2">
-                        <input type="email" className="form-control" id="email" value={this.state.email} placeholder="EMAIL@EXAMPLE.COM" onChange={this.handleChange}></input>
+                        <input type="email" className="form-control" id="email" value={this.state.email} placeholder="YOUREMAIL@EXAMPLE.COM" onChange={this.handleChange}></input>
                     </div>
                     <div className="form-group">
                         <textarea className="form-control" id="message" rows="3" value={this.state.message} placeholder="YOUR MESSAGE HERE" onChange={this.handleChange}></textarea>

@@ -6,32 +6,35 @@ module.exports = {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                type:'Oauth2',
+                type: 'Oauth2',
                 user: 'thehorrorofkurtz@gmail.com',
-                clientId:process.env.clientId,
-                clientSecret:process.env.clientSecret,
-                refreshToken:process.env.refreshToken,
-                accessToken:process.env.acccesToken,
+                clientId: process.env.clientId,
+                clientSecret: process.env.clientSecret,
+                refreshToken: process.env.refreshToken,
+                accessToken: process.env.acccesToken,
 
             }
         });
-        transporter.set('oauth2_provision_cb',(user,renew,callback)=>{
-            let accessToken=userTokens[user];
-            if(!acccesToken){
-                return callback(new Error('Unknown User'));
-            }
-            else{
-                return callback(null,accessToken)
-            }
-        })
+        const today = new Date();
+        const month = today.getMonth() + 1;
         const mailOptions = {
             from: 'danSite@noreply.com',
-            to: 'whof@bu.edu',
-            subject: 'Inquiry from Dan\'s Site',
+            to: 'dhworks5012@gmail.com',
+            subject: 'Inquiry from Dan\'s Site on ' + month + '/' + today.getDate() + '/' + today.getFullYear(),
             text: 'From: ' + req.body.fn + ' ' + req.body.ln + 'Email: ' + req.body.email + '\
             \
             '+ req.body.message
         };
+        transporter.set('oauth2_provision_cb', (user, renew, callback) => {
+            let accessToken = userTokens[user];
+            if (!acccesToken) {
+                return callback(new Error('Unknown User'));
+            }
+            else {
+                return callback(null, accessToken)
+            }
+        })
+
         transporter.sendMail(mailOptions, function (err, info) {
             if (err) {
                 console.log(err)
