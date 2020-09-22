@@ -41,7 +41,7 @@ export class Paintings extends Component {
         }
     }
     modalData(e) {
-        let source = this.state.fullImages[e.target.getAttribute("thing")]
+        let source = this.state.fullImages[e.target.getAttribute("index")]
         let altText = e.target.alt
         this.setState({ propSource: [source, altText] })
     }
@@ -102,7 +102,7 @@ export class Paintings extends Component {
                 {this.state.images ? this.state.images.map((danPainting, index) => (
                     <div key={index}>
                         <div className="clearfix">
-                            <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} key={index} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
+                            <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} index={index} key={index} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
                         </div>
                         <div className="row">
                             <div className="col-12 text-right mb-0 h6 tgray pDesc quicksand" key={index}>{this.state.names[index]}</div>
