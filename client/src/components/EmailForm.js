@@ -19,24 +19,46 @@ export class EmailForm extends Component {
     }
     onClick(e) {
         e.preventDefault()
+        Axios({
+            method: 'POST',
+            url: 'https://dhworks.net/api/sendMail/',
+            headers: { 'content-type': 'application/json' },
+            data: this.state
+        })
+            .then(res => {
+                this.setState({
+                    fn: "",
+                    ln: "",
+                    email: "",
+                    message: "",
+                    mailSent: res.data.sent
+                })
+                alert('Thank you for your email! Dan will get in touch with you shortly.')
+            })
+            .catch(err => {
+                this.setState({
+                    error: err.message
+                })
+                console.log(err)
+                alert('Something went wrong. Please contact dhworks5012@gmail.com')
+            });
+        // Axios.post('/api/sendMail', this.state)
+        //     .then(
+        //         (res) => {
 
-        Axios.post('/api/sendMail', this.state)
-            .then(
-                (res) => {
-
-                    alert('Thank you for your email! Dan will get in touch with you shortly.');
-                    this.setState({
-                        fn: "",
-                        ln: "",
-                        email: "",
-                        message: ""
-                    });
-                },
-                (err) => {
-                    console.log(err);
-                    alert('Something went wrong. Please contact dhworks5012@gmail.com')
-                }
-            );
+        //             alert('Thank you for your email! Dan will get in touch with you shortly.');
+        //             this.setState({
+        //                 fn: "",
+        //                 ln: "",
+        //                 email: "",
+        //                 message: ""
+        //             });
+        //         },
+        //         (err) => {
+        //             console.log(err);
+        //             alert('Something went wrong. Please contact dhworks5012@gmail.com')
+        //         }
+        //     );
 
     }
     render() {
