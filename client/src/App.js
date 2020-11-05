@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from "./components/Pages/Home"
 import Paintings from './components/Pages/Paintings'
 import About from "./components/Pages/About"
@@ -12,16 +12,17 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
+
+        <Route exact path="/" component={Home} />
+        <Route path="/Main">
           <Main>
             <Route exact path="/Main/Paintings" component={Paintings} />
             <Route exact path="/Main/About" component={About} />
             <Route exact path="/Main/Contact" component={Contact} />
             <Route exact path="/Main/InstallationViews" component={InstallationViews} />
           </Main>
+        </Route>
 
-        </Switch>
       </Router>
 
     );

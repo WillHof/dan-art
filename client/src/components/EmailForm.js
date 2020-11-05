@@ -33,7 +33,7 @@ export class EmailForm extends Component {
                     message: "",
                     mailSent: res.data.sent
                 })
-                alert('Thank you for your email! Dan will get in touch with you shortly.')
+                alert('Thank you for your interest. We will get in touch with you shortly.')
             })
             .catch(err => {
                 this.setState({
