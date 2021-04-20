@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 
 class Drawings extends Component{
+    state ={
+        images:[]
+    }
+    componentDidMount(){
+
+    }
     render() {
         return(
             <div>
-                drawings
+                <div className="col-sm-12 col-md-8 col-xl-7 pt-4 blockContainer mr-auto ">
+                    </div>
             </div>
         )
     }
