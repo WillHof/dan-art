@@ -6,6 +6,7 @@ import Paintings from './components/Pages/Paintings'
 import About from "./components/Pages/About"
 import Contact from "./components/Pages/Contact"
 import InstallationViews from "./components/Pages/InstallationViews"
+import Drawings from "./components/Pages/Drawings"
 import Main from "./components/Pages/Main"
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/Main/About" component={About} />
             <Route exact path="/Main/Contact" component={Contact} />
             <Route exact path="/Main/InstallationViews" component={InstallationViews} />
+            <Route exact path="/Main/Drawings" component={Drawings} />
           </Main>
         </Route>
 

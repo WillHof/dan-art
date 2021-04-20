@@ -22,8 +22,8 @@ export class Nav extends Component {
                                     <Link to="/Main/Paintings?category=SmallAbstractions" className={window.location.search === "?category=SmallAbstractions" ? "dropdown-item" : "dropdown-item tgray4"}>Small Abstractions</Link>
                                     <Link to="/Main/Paintings?category=RecentWork" className={window.location.search === "?category=RecentWork" ? "dropdown-item" : "dropdown-item tgray4"}>Recent Work</Link>
                                     <Link to="/Main/Paintings?category=EarlyWork" className={window.location.search === "?category=EarlyWork" ? "dropdown-item" : "dropdown-item tgray4"} >Early Work <i>(1970-1990)</i></Link>
-                                    {/* <Link to="/Main/Paintings?category=MonotypesDrawings" className={window.location.search === "?category=MonotypesDrawings" ? "dropdown-item" : "dropdown-item tgray4"} >Drawings</Link> */}
-                                    <Link to="/Main/InstallationViews" className={window.location.search === "?category=InstallationViews" ? "dropdown-item" : "dropdown-item tgray4"} >Installation Views</Link>
+                                    <Link to="/Main/Drawings" className={window.location.pathname === "/Main/Drawings" ? "dropdown-item" : "dropdown-item tgray4"} >Drawings <i>(1990-2020)</i></Link>
+                                    <Link to="/Main/InstallationViews" className={window.location.pathname === "/Main/InstallationViews" ? "dropdown-item" : "dropdown-item tgray4"} >Installation Views</Link>
                                 </div>
                             </li>
                             <li className={window.location.pathname === "/Main/About" ? "nav-item active" : "nav-item"}>
