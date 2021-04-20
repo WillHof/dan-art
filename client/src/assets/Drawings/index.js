@@ -1,4 +1,3 @@
-const Drawings = [
-
-]
-export default Drawings
+const fs = require('fs')
+const files = fs.readdirSync("../Drawings")
+console.log(files)
