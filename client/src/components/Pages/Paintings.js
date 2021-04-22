@@ -3,8 +3,6 @@ import EarlyWork from "../../assets/EarlyWork/index";
 import RecentWork from "../../assets/RecentWork/index";
 import SmallAbstractions from "../../assets/SmallAbstractions/index";
 import LargeAbstractions from "../../assets/LargeAbstractions/index";
-// import Drawings from "../../assets/Drawings/index";
-// import DrawingsFull from "../../assets/Drawings/indexfull"
 import EarlyWorkFull from "../../assets/EarlyWork/fullindex";
 import LargeAbstractionsFull from "../../assets/LargeAbstractions/indexfull";
 import SmallAbstractionsFull from "../../assets/SmallAbstractions/indexfull";

@@ -17,12 +17,13 @@ class Drawings extends Component{
         this.getDrawings()
     }
     modalData(e) {
-        let source = this.state.fullImages[e.target.getAttribute("index")]
+        let source = this.state.images[e.target.getAttribute("index")].orgPath
         let altText = e.target.alt
         this.setState({ propSource: [source, altText] })
     }
     getDrawings = ()=>{
-        let fullPaths = DrawingsFull
+        // const imageMap = DrawingsFull
+        
         //update this to downscaled images
         let imagePaths = DrawingsFull
            //extracts filename before first semicolon from filepath
@@ -35,15 +36,15 @@ class Drawings extends Component{
            if (imagePaths.length) {
                //loops through images in the imagepath folder, pushes names and dimensions into an array
                for (let index = 0; index < imagePaths.length; index++) {
-                   const element = imagePaths[index];
+                   const element = imagePaths[index].sm;
                    let pName = element.match(namePath)[0].substring(2).replace(/\^/g, "#").replace(/\$/g, "'");
                    let pDims = element.match(dimPath)[0].substring(1).replace(/-/g, " ").replace(/_/g, "/");
-                   let pFull = fullPaths[index]
+                //    let pFull = imageMap[index].orgPath
                    pArr.push(pName);
                    dArr.push(pDims);
-                   fArr.push(pFull);
+                //    fArr.push(pFull);
                }
-               this.setState({ images: imagePaths, names: pArr, dims: dArr, fullImages: fArr })
+               this.setState({ images: imagePaths, names: pArr, dims: dArr})
            }
            else {
                this.setState({ images: "", names: "", dims: "" })
@@ -55,7 +56,7 @@ class Drawings extends Component{
                 {this.state.images ? this.state.images.map((danPainting, index) => (
                     <div key={index}>
                         <div className="clearfix">
-                            <img src={danPainting} alt={"Dan Hofstadter" + this.state.names[index]} index={index} key={index} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
+                            <img src={danPainting.sm} alt={"Dan Hofstadter" + this.state.names[index]} index={index} key={index} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
                         </div>
                         <div className="row">
                             <div className="col-12 text-right mb-0 h6 tgray pDesc quicksand" key={index}>{this.state.names[index]}</div>
