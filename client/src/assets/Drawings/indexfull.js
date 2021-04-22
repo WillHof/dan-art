@@ -3,7 +3,7 @@ const DrawingsFull = [
     require('./DH-Ritual 2 Meditation 2020;20x15;.jpeg'),
     require('./DH-Ritual 3 Chastisement 2020;15x20;.jpeg'),
     require('./DH-Ritual 4 Grieving 2020;24x15;.jpeg'),
-    
+    require('./DH-Peg Legs 2018;23x19;.jpeg'),
     require('./DH-Self-Portrait 1991;10x13.5;.jpeg'),
     require('./DH-Jimmy with a Film Reel 1991;11x15;.jpeg'),
     require('./DH-Viktor 198_;13x18;.jpeg'),
