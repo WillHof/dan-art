@@ -22,27 +22,22 @@ class Drawings extends Component{
         this.setState({ propSource: [source, altText] })
     }
     getDrawings = ()=>{
-        // const imageMap = DrawingsFull
-        
-        //update this to downscaled images
+        //DrawingsFull is an array of objects, each of which contains the filepaths to different sizes of an image. object attributes are: orgPath, sm, md. 
         let imagePaths = DrawingsFull
-           //extracts filename before first semicolon from filepath
+           //used to extract filename before first semicolon from filepath
            let namePath = /a\/[^;]*/;
-           //extracts dimensions, after first semicolon and before next semicolon from filepath
+           //used to extract dimensions, after first semicolon and before next semicolon from filepath
            let dimPath = /;[^;]*/;
            let pArr = [];
            let dArr = [];
-           let fArr = []
            if (imagePaths.length) {
-               //loops through images in the imagepath folder, pushes names and dimensions into an array
+               //stores image names and dims to write them to the DOM. 
                for (let index = 0; index < imagePaths.length; index++) {
                    const element = imagePaths[index].sm;
                    let pName = element.match(namePath)[0].substring(2).replace(/\^/g, "#").replace(/\$/g, "'");
                    let pDims = element.match(dimPath)[0].substring(1).replace(/-/g, " ").replace(/_/g, "/");
-                //    let pFull = imageMap[index].orgPath
                    pArr.push(pName);
                    dArr.push(pDims);
-                //    fArr.push(pFull);
                }
                this.setState({ images: imagePaths, names: pArr, dims: dArr})
            }
@@ -56,7 +51,11 @@ class Drawings extends Component{
                 {this.state.images ? this.state.images.map((danPainting, index) => (
                     <div key={index}>
                         <div className="clearfix">
-                            <img src={danPainting.sm} alt={"Dan Hofstadter" + this.state.names[index]} index={index} key={index} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"></img>
+                            {/* srcSet doesn't allow spaces in filenames. escape ensures that the string will be encoded as a URI. If the path assigned to srcSet contains accented characters it breaks. Remove accents from files that are assigned to srcSet. The displayed name is unaffected*/}
+                            <picture> 
+                                <source media="(min-width:992px)" srcSet={escape(`${danPainting.md}`)}/>
+                                <img src={danPainting.sm} alt={"Dan Hofstadter" + this.state.names[index]} index={index} key={index} data-toggle="modal" data-target="#paintingModal" onClick={this.modalData} className="paintingImage float-right"/>
+                            </picture>
                         </div>
                         <div className="row">
                             <div className="col-12 text-right mb-0 h6 tgray pDesc quicksand" key={index}>{this.state.names[index]}</div>
